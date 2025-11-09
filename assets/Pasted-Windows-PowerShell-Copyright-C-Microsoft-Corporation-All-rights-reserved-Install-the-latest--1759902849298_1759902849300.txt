@@ -1,0 +1,60 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Windows\system32> cd C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2
+>> .\venv\Scripts\Activate.ps1
+>>
+>> # Check Python version
+>> python --version
+>>
+>> # Uninstall MT5
+>> python -m pip uninstall MetaTrader5 -y
+>>
+>> # Reinstall with specific wheel
+>> python -m pip install MetaTrader5 --no-cache-dir --force-reinstall
+>>
+>> # Test import
+>> python -c "import MetaTrader5 as mt5; print('MT5 Version:', mt5.__version__); print('MT5 Core:', mt5._core)"
+Python 3.10.0
+Found existing installation: MetaTrader5 5.0.5200
+Uninstalling MetaTrader5-5.0.5200:
+  Successfully uninstalled MetaTrader5-5.0.5200
+Collecting MetaTrader5
+  Downloading MetaTrader5-5.0.5328-cp310-cp310-win_amd64.whl.metadata (2.4 kB)
+Collecting numpy>=1.7 (from MetaTrader5)
+  Downloading numpy-2.2.6-cp310-cp310-win_amd64.whl.metadata (60 kB)
+Downloading MetaTrader5-5.0.5328-cp310-cp310-win_amd64.whl (50 kB)
+Downloading numpy-2.2.6-cp310-cp310-win_amd64.whl (12.9 MB)
+   ---------------------------------------- 12.9/12.9 MB 101.1 MB/s  0:00:00
+Installing collected packages: numpy, MetaTrader5
+  Attempting uninstall: numpy
+    Found existing installation: numpy 2.3.3
+    Uninstalling numpy-2.3.3:
+      Successfully uninstalled numpy-2.3.3
+Successfully installed MetaTrader5-5.0.5328 numpy-2.2.6
+MT5 Version: 5.0.5328
+MT5 Core: <module 'MetaTrader5._core' from 'C:\\Users\\shivamkumar14102801\\ZepixTradingBot-old-v2\\venv\\lib\\site-packages\\MetaTrader5\\_core.cp310-win_amd64.pyd'>
+(venv) PS C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2> python main.py --host 0.0.0.0 --port 80
+🔧 Config loaded - MT5 Login: 308646228, Server: XMGlobal-MT5 6
+==================================================
+ZEPIX TRADING BOT v2.0
+==================================================
+Starting server on 0.0.0.0:80
+Features enabled:
+✓ Fixed lot sizes
+✓ Re-entry system
+✓ SL hunting protection
+✓ 1:1.5 Risk-Reward
+✓ Progressive SL reduction
+==================================================
+←[32mINFO←[0m:     Started server process [←[36m4448←[0m]
+←[32mINFO←[0m:     Waiting for application startup.
+✅ MT5 connection established
+Account Balance: $10226.50
+✅ Trend manager set in Telegram bot
+✅ Trading engine initialized successfully
+✅ Telegram bot polling started
+←[32mINFO←[0m:     Application startup complete.
+←[32mINFO←[0m:     Uvicorn running on ←[1mhttp://0.0.0.0:80←[0m (Press CTRL+C to quit)

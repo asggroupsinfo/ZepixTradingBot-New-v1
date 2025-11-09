@@ -1,0 +1,87 @@
+## 📊 **TRADINGVIEW ALERT JSON CODES:**
+
+### 1. **BIAS ALERTS (1D & 1H):**
+**1D Bullish Bias:**
+```json
+{"type": "bias", "symbol": "{{ticker}}", "signal": "bull", "tf": "1d", "price": {{close}}, "strategy": "ZepixPremium"}
+```
+
+**1D Bearish Bias:**
+```json
+{"type": "bias", "symbol": "{{ticker}}", "signal": "bear", "tf": "1d", "price": {{close}}, "strategy": "ZepixPremium"}
+```
+
+**1H Bullish Bias:**
+```json
+{"type": "bias", "symbol": "{{ticker}}", "signal": "bull", "tf": "1h", "price": {{close}}, "strategy": "ZepixPremium"}
+```
+
+**1H Bearish Bias:**
+```json
+{"type": "bias", "symbol": "{{ticker}}", "signal": "bear", "tf": "1h", "price": {{close}}, "strategy": "ZepixPremium"}
+```
+
+### 2. **TREND ALERTS (1H & 15M):**
+**1H Bullish Trend:**
+```json
+{"type": "trend", "symbol": "{{ticker}}", "signal": "bull", "tf": "1h", "price": {{close}}, "strategy": "ZepixPremium"}
+```
+
+**1H Bearish Trend:**
+```json
+{"type": "trend", "symbol": "{{ticker}}", "signal": "bear", "tf": "1h", "price": {{close}}, "strategy": "ZepixPremium"}
+```
+
+**15M Bullish Trend:**
+```json
+{"type": "trend", "symbol": "{{ticker}}", "signal": "bull", "tf": "15m", "price": {{close}}, "strategy": "ZepixPremium"}
+```
+
+**15M Bearish Trend:**
+```json
+{"type": "trend", "symbol": "{{ticker}}", "signal": "bear", "tf": "15m", "price": {{close}}, "strategy": "ZepixPremium"}
+```
+
+### 3. **ENTRY ALERTS (5M, 15M, 1H):**
+**5M Bullish Entry:**
+```json
+{"type": "entry", "symbol": "{{ticker}}", "signal": "buy", "tf": "5m", "price": {{close}}, "strategy": "ZepixPremium"}
+```
+
+**5M Bearish Entry:**
+```json
+{"type": "entry", "symbol": "{{ticker}}", "signal": "sell", "tf": "5m", "price": {{close}}, "strategy": "ZepixPremium"}
+```
+
+**15M Bullish Entry:**
+```json
+{"type": "entry", "symbol": "{{ticker}}", "signal": "buy", "tf": "15m", "price": {{close}}, "strategy": "ZepixPremium"}
+```
+
+**15M Bearish Entry:**
+```json
+{"type": "entry", "symbol": "{{ticker}}", "signal": "sell", "tf": "15m", "price": {{close}}, "strategy": "ZepixPremium"}
+```
+
+**1H Bullish Entry:**
+```json
+{"type": "entry", "symbol": "{{ticker}}", "signal": "buy", "tf": "1h", "price": {{close}}, "strategy": "ZepixPremium"}
+```
+
+**1H Bearish Entry:**
+```json
+{"type": "entry", "symbol": "{{ticker}}", "signal": "sell", "tf": "1h", "price": {{close}}, "strategy": "ZepixPremium"}
+```
+
+## ⚡ **TESTING KE LIYE (Aapke Successful Test Sequence):**
+```json
+// Step 1: 1H Bearish Bias
+{"type": "bias", "symbol": "XAUUSD", "signal": "bear", "tf": "1h", "price": 3721.405, "strategy": "ZepixPremium"}
+
+// Step 2: 15M Bearish Trend  
+{"type": "trend", "symbol": "XAUUSD", "signal": "bear", "tf": "15m", "price": 3720.500, "strategy": "ZepixPremium"}
+
+// Step 3: 5M Sell Entry
+{"type": "entry", "symbol": "XAUUSD", "signal": "sell", "tf": "5m", "price": 3719.800, "strategy": "ZepixPremium"}
+```
+

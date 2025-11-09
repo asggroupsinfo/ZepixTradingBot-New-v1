@@ -1,0 +1,126 @@
+Shivam Kumar Gupta, [08-10-2025 11:33]
+/start
+
+ShivamAlgoBot, [08-10-2025 11:33]
+🤖 Zepix Trading Bot v2.0
+
+✅ Bot is active with enhanced features
+📊 1:1.5 Risk-Reward System Active
+🔄 Re-entry System Enabled
+
+Core Commands:
+/status - Complete bot status
+/signal_status - Live signal status
+/pause - Pause trading
+/resume - Resume trading
+
+Performance:
+/performance - Trading performance
+/stats - Risk statistics
+/trades - Open trades
+/chains - Re-entry chains
+
+Logic Control:
+/logic_status - Check logic status
+/logic1_on/off - Control Logic 1
+/logic2_on/off - Control Logic 2
+/logic3_on/off - Control Logic 3
+
+Lot Size Control:
+/lot_size_status - View current lot settings
+/set_lot_size TIER LOT - Override lot size
+
+Trend Management:
+/set_trend SYMBOL TIMEFRAME TREND - Set MANUAL trend
+/set_auto SYMBOL TIMEFRAME - Set AUTO mode (TradingView updates)
+/trend_mode SYMBOL TIMEFRAME - Check current mode
+/show_trends - View all trends
+/trend_matrix - Complete trend matrix
+
+Risk Management:
+/lot_size_status - Current lot settings
+/set_lot_size TIER LOT - Override lot size
+
+Shivam Kumar Gupta, [08-10-2025 11:33]
+/lot_size_status
+
+ShivamAlgoBot, [08-10-2025 11:33]
+📦 Lot Size Configuration
+
+Account Balance: $10226.50
+Current Tier: $10000
+Current Lot Size: 0.10
+
+Tier Settings:
+$5,000 → 0.05 lots
+$10,000 → 0.10 lots
+$25,000 → 1.00 lots
+$100,000 → 5.00 lots
+
+Use /set_lot_size TIER LOT to override
+
+Shivam Kumar Gupta, [08-10-2025 11:33]
+/stats
+
+ShivamAlgoBot, [08-10-2025 11:33]
+⚠️ Risk Management
+
+🔸 Risk Tier: $10000
+🔸 Daily Loss Limit: $400
+🔸 Max Total Loss: $1000
+
+📊 Daily Loss: $0.00/400
+🔻 Lifetime Loss: $225.00/1000
+
+📦 Current Lot Size: 0.1
+
+ShivamAlgoBot, [08-10-2025 15:25]
+🎯 NEW TRADE #1
+Strategy: LOGIC1
+Symbol: XAUUSD
+Direction: BUY
+Entry: 4046.49500
+SL: 4036.49500
+TP: 4061.49500
+Lots: 0.10
+Risk: 1:1.5 RR
+
+ShivamAlgoBot, [08-10-2025 16:02]
+❌ TRADE CLOSED
+Reason: MT5_AUTO_CLOSED
+Symbol: XAUUSD
+Strategy: LOGIC1
+PnL: $-95.10
+
+Shivam Kumar Gupta, [08-10-2025 17:11]
+/chains
+
+ShivamAlgoBot, [08-10-2025 17:11]
+🔗 Active Re-entry Chains
+
+XAUUSD - BUY
+Level: 1/2
+Total Profit: $0.00
+Status: active
+────────────────────
+
+ShivamAlgoBot, [08-10-2025 17:35]
+🎯 NEW TRADE #2
+Strategy: LOGIC1
+Symbol: XAUUSD
+Direction: BUY
+Entry: 4042.41500
+SL: 4032.41500
+TP: 4057.41500
+Lots: 0.10
+Risk: 1:1.5 RR
+
+ShivamAlgoBot, [08-10-2025 18:07]
+❌ TRADE CLOSED
+Reason: MT5_AUTO_CLOSED
+Symbol: XAUUSD
+Strategy: LOGIC1
+PnL: $-99.20
+
+ShivamAlgoBot, [08-10-2025 18:30]
+📊 XAUUSD 15M Trend Updated: BEAR

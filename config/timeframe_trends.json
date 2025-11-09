@@ -1,0 +1,70 @@
+{
+    "symbols": {
+        "XAUUSD": {
+            "1h": {
+                "trend": "BEARISH",
+                "mode": "AUTO",
+                "last_update": "2025-11-09T01:40:21.985485"
+            },
+            "15m": {
+                "trend": "BEARISH",
+                "mode": "AUTO",
+                "last_update": "2025-11-09T01:40:28.435139"
+            },
+            "1d": {
+                "trend": "NEUTRAL",
+                "mode": "AUTO",
+                "last_update": "2025-09-30T12:39:58.676318"
+            },
+            "5m": {
+                "trend": "BULLISH",
+                "mode": "MANUAL",
+                "last_update": "2025-10-07T06:12:15.680524"
+            }
+        },
+        "EURUSD": {
+            "1h": {
+                "trend": "BULLISH",
+                "mode": "AUTO",
+                "last_update": "2025-11-09T11:56:54.303563"
+            },
+            "15m": {
+                "trend": "BULLISH",
+                "mode": "AUTO",
+                "last_update": "2025-11-09T00:50:12.290717"
+            }
+        },
+        "AUDUSD": {
+            "1h": {
+                "trend": "BULLISH",
+                "mode": "MANUAL",
+                "last_update": "2025-10-07T06:14:08.730995"
+            }
+        },
+        "GBPUSD": {
+            "1h": {
+                "trend": "BULLISH",
+                "mode": "AUTO",
+                "last_update": "2025-11-09T01:07:31.341906"
+            },
+            "15m": {
+                "trend": "BULLISH",
+                "mode": "AUTO",
+                "last_update": "2025-11-09T01:07:37.593813"
+            }
+        },
+        "GBPJPY": {
+            "1h": {
+                "trend": "BULLISH",
+                "mode": "AUTO",
+                "last_update": "2025-10-07T19:41:43.348574"
+            },
+            "15m": {
+                "trend": "BULLISH",
+                "mode": "AUTO",
+                "last_update": "2025-10-07T19:41:44.946707"
+            }
+        }
+    },
+    "default_mode": "AUTO"
+}

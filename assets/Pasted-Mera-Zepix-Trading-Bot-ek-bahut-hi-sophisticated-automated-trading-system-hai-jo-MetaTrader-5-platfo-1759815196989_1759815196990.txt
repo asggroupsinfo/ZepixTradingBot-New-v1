@@ -1,0 +1,39 @@
+Mera Zepix Trading Bot ek bahut hi sophisticated automated trading system hai jo MetaTrader 5 platform ke saath integrate hai. Main tumhe iske main features aur working mechanism detail mein samjhata hoon:
+Core Trading Logic - Teen Strategies
+Bot teen alag trading logics par kaam karta hai, aur har logic ka apna timeframe combination hai. Logic 1 sabse aggressive hai jo one hour aur fifteen minute ke bias ko dekhte huye five minute par entries leta hai. Logic 2 thoda conservative hai jo same one hour aur fifteen minute bias use karta hai lekin fifteen minute par hi entry leta hai. Logic 3 sabse long term hai jo daily aur one hour trends ko follow karte huye one hour par trades execute karta hai.
+Har logic mein trend alignment check hota hai. Matlab agar tumhara higher timeframe bullish hai aur lower timeframe bhi bullish hai tabhi trade execute hoga. Agar koi mismatch hai to bot trade nahi lega. Yeh approach false signals ko filter karne mein help karta hai.
+Fixed Lot Size System
+Bot dynamic lot sizing nahi karta, instead yeh account balance ke basis par fixed lots use karta hai. Agar tumhara balance five thousand dollars hai to point zero five lots, ten thousand par point one lots, twenty five thousand par one lot, aur hundred thousand par five lots automatically assign ho jate hain. Yeh approach risk ko predictable banata hai kyunki har trade pe same percentage risk rehta hai.
+Tumhare paas manual override ka option bhi hai. Agar tum chahte ho ki kisi specific tier par different lot size use ho to Telegram commands se yeh set kar sakte ho.
+Risk Management Protection
+Bot mein teen layers of protection hain. Pehli layer daily loss limit hai jo ensure karti hai ki ek din mein tumhara loss ek certain amount se zyada na ho. Agar tum five thousand dollar tier par ho to daily loss limit do hundred dollars hai.
+Dusri layer lifetime loss limit hai. Yeh cumulative loss track karta hai aur agar lifetime loss limit hit hota hai to bot automatically trading pause kar deta hai.
+Teesri layer per-trade risk capping hai jo symbol ki volatility ke basis par adjust hoti hai. Low volatility pairs jaise EURUSD ke liye kam risk, aur high volatility pairs jaise XAUUSD aur cross pairs ke liye zyada risk allowed hai.
+Re-entry System - SL Hunting Protection
+Yeh feature bahut interesting hai. Jab tumhara trade stop loss hit karta hai, bot check karta hai ki kya yeh genuine reversal tha ya sirf temporary spike tha jo tumhare SL ko hunt kar gaya. Agar price thirty minutes ke andar wapas original entry zone mein aata hai aur same direction ka signal milta hai to bot automatically re-entry leta hai.
+Re-entry mein progressive SL reduction hota hai. Matlab pehli re-entry mein SL distance original se twenty percent kam hota hai, dusri re-entry mein forty percent kam, aur aise hi aage bhi. Yeh approach tumhare risk ko reduce karta hai jab tum recovery try kar rahe ho.
+Bot maximum five re-entry levels tak ja sakta hai. Har re-entry ke saath chain tracking hoti hai jo overall profitability monitor karti hai. Agar koi chain profitable ho jata hai to subsequent re-entries ko encourage kiya jata hai.
+TP Continuation Feature
+Jab tumhara trade target hit karta hai aur profit book hota hai, lekin trend abhi bhi strong hai, to bot automatically continuation entry le sakta hai. Yeh especially powerful hai trending markets mein jahan ek strong move multiple entries de sakti hai.
+TP continuation bhi same progressive SL reduction logic use karta hai taaki successive entries mein risk gradually reduce ho.
+Trend Management System
+Bot do tarah ki trend management support karta hai. Pehla hai AUTO mode jahan TradingView se aane wale bias aur trend signals automatically trends update karte hain. Yeh default mode hai aur most flexible hai.
+Dusra hai MANUAL mode jahan tum Telegram commands se manually trend set kar sakte ho. Agar tum chahte ho ki kisi specific symbol ya timeframe ka trend lock ho jaye aur TradingView signals se update na ho, to MANUAL mode use kar sakte ho. Yeh useful hai jab tum apna own analysis kar rahe ho aur bot ko apne bias se trade karna chahte ho.
+Bot har timeframe ke liye alag se trend maintain karta hai. Five minute, fifteen minute, one hour aur daily har ek ka apna independent trend ho sakta hai. Trading decision lene se pehle bot relevant timeframes ke trends ko check karta hai aur alignment verify karta hai.
+Telegram Integration
+Telegram bot tumhara complete control center hai. Tum real-time mein bot ki puri status dekh sakte ho, individual logics ko on-off kar sakte ho, manual trends set kar sakte ho, performance reports dekh sakte ho, aur emergency mein trading pause kar sakte ho.
+Bot har trade execution, closure, ya important event par tumhe notification bhejta hai. Tumhe pata rehta hai ki kab entry li, kyun li, kab close hui aur kitna profit ya loss hua.
+Commands se tum lot sizes adjust kar sakte ho, risk parameters check kar sakte ho, open trades dekh sakte ho, aur re-entry chains monitor kar sakte ho.
+One-to-One Risk Reward System
+Bot strictly one-to-one risk reward ratio follow karta hai. Matlab jitna tumhara stop loss hai utna hi tumhara take profit hoga. Yeh approach consistency maintain karta hai aur ensures karta hai ki fifty percent se zyada win rate hone par tum profitable rahoge.
+SL aur TP calculations accurate pip calculations par based hain jo har symbol ki specific characteristics consider karte hain. XAUUSD ka calculation alag hai forex pairs se kyunki gold ki pip value different hai.
+Database and Analytics
+Bot har trade ki complete history SQLite database mein store karta hai. Yeh tumhe long term performance analysis karne mein help karta hai. Tum dekh sakte ho ki konsa logic better perform kar raha hai, konse pairs profitable hain, aur tumhara overall win rate kya hai.
+Analytics engine different reports generate kar sakta hai jaise performance report, pair-wise performance, strategy-wise performance. Yeh insights tumhe apni trading approach refine karne mein help karti hain.
+Workflow Kaise Hota Hai
+Jab TradingView se bias ya trend alert aata hai, bot pehle verify karta hai ki yeh valid signal hai ya nahi. Phir woh apne internal trend manager mein yeh update store karta hai. Jab entry signal aata hai, bot check karta hai ki relevant logic enabled hai ya nahi, trends aligned hain ya nahi, aur risk limits allow kar rahi hain ya nahi.
+Agar sab green light hai to bot account balance check karta hai, appropriate lot size calculate karta hai, pip calculator se accurate SL aur TP prices nikalta hai, aur MT5 par order place kar deta hai. Order placement ke baad trade tracking shuru ho jati hai.
+Background mein ek continuous loop chalta hai jo har paanch second mein sab open trades check karta hai. Agar price SL ya TP hit karta hai to immediate action liya jata hai. Agar trend reversal detect hota hai to position close kar di jati hai chahe SL ya TP hit na hua ho.
+Yeh bot production environment mein port eighty par run hota hai taaki TradingView webhook alerts directly receive ho sakein. Health check endpoint se tum verify kar sakte ho ki bot properly running hai ya nahi.
+Simulation mode bhi hai jahan tum bina actual money risk kiye poora system test kar sakte ho. Yeh especially useful hai jab tum naye strategies test kar rahe ho ya configuration changes kar rahe ho.
+

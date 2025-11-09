@@ -1,0 +1,701 @@
+Shivam Kumar Gupta, [09-10-2025 02:45]
+/start
+
+ShivamAlgoBot, [09-10-2025 02:45]
+🤖 Zepix Trading Bot v2.0
+✅ Bot is active with enhanced features
+📊 1:1.5 Risk-Reward System Active
+🔄 Re-entry System Enabled
+🔄 SL Hunt Re-entry System Enabled
+⚡ Live Price Advanced System Working
+
+📊 TRADING CONTROL
+/status - Bot & trade status
+/pause - Pause trading
+/resume - Resume trading
+/signal_status - Live signals
+/simulation_mode [on/off] - Toggle simulation mode
+
+📈 PERFORMANCE & ANALYTICS
+/performance - Trading metrics
+/stats - Risk statistics
+/trades - Open positions
+/chains - Re-entry chains
+
+⚙️ STRATEGY CONTROL
+/logic_status - View all logic status
+/logic1_on, /logic1_off - 1H+15M→5M
+/logic2_on, /logic2_off - 1H+15M→15M
+/logic3_on, /logic3_off - D+1H→1H
+
+🔄 ADVANCED RE-ENTRY SYSTEM
+/tp_system [on/off/status] - TP continuation
+/sl_hunt [on/off/status] - SL hunt re-entry
+/tp_report - 30-day re-entry stats
+/reentry_config - View all re-entry settings
+/set_monitor_interval [30-300] - Price monitor interval
+/set_sl_offset [1-5] - SL hunt offset pips
+/set_cooldown [30-300] - SL hunt cooldown
+/set_recovery_time [1-10] - Price recovery window
+/set_max_levels [1-5] - Max chain levels
+/set_sl_reduction [0.3-0.7] - SL reduction %
+/reset_reentry_config - Reset to defaults
+
+📍 TREND MANAGEMENT
+/show_trends - All trends
+/trend_matrix - Complete matrix
+/set_trend SYMBOL TF TREND - Manual trend
+/set_auto SYMBOL TF - Auto mode
+/trend_mode SYMBOL TF - Check mode
+
+💰 RISK & LOT MANAGEMENT
+/view_risk_caps - Daily/Lifetime caps & loss
+/set_daily_cap [amount] - Set daily limit
+/set_lifetime_cap [amount] - Set lifetime limit
+/set_risk_tier BALANCE DAILY LIFETIME - Complete tier
+/clear_loss_data - Reset lifetime loss
+
+/view_sl_config - Symbol SL settings
+/set_symbol_sl SYMBOL VOL SL - Update symbol SL
+/update_volatility SYMBOL LEVEL - Quick volatility
+
+/lot_size_status - Lot settings
+/set_lot_size TIER LOT - Override lot size
+
+Shivam Kumar Gupta, [09-10-2025 02:46]
+/status
+
+ShivamAlgoBot, [09-10-2025 02:46]
+📊 Bot Status
+
+🔸 Trading: ✅ ACTIVE
+🔸 Simulation: ❌ OFF
+🔸 MT5: ✅ Connected
+🔸 Balance: $9917.50
+🔸 Lot Size: 0.05
+
+Current Modes (XAUUSD):
+LOGIC1: BULLISH
+LOGIC2: BULLISH
+LOGIC3: BULLISH
+
+Live Signals (XAUUSD):
+5min: BULLISH
+15min: BULLISH
+1H: BULLISH
+1D: BULLISH
+
+ShivamAlgoBot, [09-10-2025 03:21]
+✅ MT5 Connection Established
+
+ShivamAlgoBot, [09-10-2025 03:21]
+🤖 Trading Bot v2.0 Started Successfully!
+🔧 Mode: LIVE TRADING
+📊 1:1.5 RR System Active
+🔄 Re-entry System Enabled
+
+ShivamAlgoBot, [09-10-2025 05:30]
+📊 XAUUSD 1H Trend Updated: BEAR
+
+ShivamAlgoBot, [09-10-2025 07:15]
+📊 XAUUSD 15M Trend Updated: BULL
+
+Shivam Kumar Gupta, [09-10-2025 10:21]
+/show_trends
+
+ShivamAlgoBot, [09-10-2025 10:22]
+📊 Current Trends
+
+XAUUSD:
+  5m: BULLISH 🔒
+  15m: BULLISH 🔄
+  1h: BEARISH 🔄
+─────────────
+EURUSD:
+  15m: BULLISH 🔄
+  1h: BULLISH 🔄
+─────────────
+GBPUSD:
+  15m: BULLISH 🔄
+  1h: BULLISH 🔄
+─────────────
+
+Shivam Kumar Gupta, [09-10-2025 10:23]
+/trend_matrix
+
+ShivamAlgoBot, [09-10-2025 10:23]
+🎯 Complete Trend Matrix
+
+XAUUSD
+  5m: 🟢 BULLISH 🔒
+  15m: 🟢 BULLISH 🔄
+  1h: 🔴 BEARISH 🔄
+  1d: ⚪ NEUTRAL 🔄
+─────────────
+EURUSD
+  5m: ⚪ NEUTRAL 🔄
+  15m: 🟢 BULLISH 🔄
+  1h: 🟢 BULLISH 🔄
+  1d: ⚪ NEUTRAL 🔄
+  ✅ LOGIC1: BULLISH
+  ✅ LOGIC2: BULLISH
+─────────────
+GBPUSD
+  5m: ⚪ NEUTRAL 🔄
+  15m: 🟢 BULLISH 🔄
+  1h: 🟢 BULLISH 🔄
+  1d: ⚪ NEUTRAL 🔄
+  ✅ LOGIC1: BULLISH
+  ✅ LOGIC2: BULLISH
+─────────────
+USDJPY
+  5m: ⚪ NEUTRAL 🔄
+  15m: ⚪ NEUTRAL 🔄
+  1h: ⚪ NEUTRAL 🔄
+  1d: ⚪ NEUTRAL 🔄
+─────────────
+USDCAD
+  5m: ⚪ NEUTRAL 🔄
+  15m: ⚪ NEUTRAL 🔄
+  1h: ⚪ NEUTRAL 🔄
+  1d: ⚪ NEUTRAL 🔄
+─────────────
+
+Legend: 🟢BULLISH 🔴BEARISH ⚪NEUTRAL 🔒MANUAL 🔄AUTO
+
+Shivam Kumar Gupta, [09-10-2025 10:24]
+/set_trend
+
+ShivamAlgoBot, [09-10-2025 10:24]
+📝 Usage: /set_trend SYMBOL TIMEFRAME TREND
+
+Symbols: XAUUSD, EURUSD, GBPUSD, etc.
+Timeframes: 5m, 15m, 1h, 1d
+Trends: BULLISH, BEARISH, NEUTRAL
+
+⚠️ This sets MANUAL mode - TradingView signals won't auto-update
+Use /set_auto to allow auto updates
+
+Example: /set_trend XAUUSD 1h BULLISH
+
+Shivam Kumar Gupta, [09-10-2025 10:24]
+/set_trend XAUUSD 5m BULLISH
+
+ShivamAlgoBot, [09-10-2025 10:24]
+🔒 Manual Trend Set
+XAUUSD 5m → BULLISH (MANUAL)
+⚠️ TradingView signals won't auto-update this
+Use /set_auto XAUUSD 5m to allow auto updates
+
+Shivam Kumar Gupta, [09-10-2025 10:25]
+/set_trend XAUUSD 1D BULLISH
+
+ShivamAlgoBot, [09-10-2025 10:25]
+🔒 Manual Trend Set
+XAUUSD 1d → BULLISH (MANUAL)
+⚠️ TradingView signals won't auto-update this
+Use /set_auto XAUUSD 1d to allow auto updates
+
+Shivam Kumar Gupta, [09-10-2025 10:25]
+/set_auto XAUUSD 1D BULLISH
+
+ShivamAlgoBot, [09-10-2025 10:25]
+🔄 Auto Mode Enabled
+XAUUSD 1d → BULLISH (AUTO)
+📡 Now accepting TradingView signals
+
+Shivam Kumar Gupta, [09-10-2025 10:25]
+/set_auto XAUUSD 5m BULLISH
+
+ShivamAlgoBot, [09-10-2025 10:25]
+🔄 Auto Mode Enabled
+XAUUSD 5m → BULLISH (AUTO)
+📡 Now accepting TradingView signals
+
+Shivam Kumar Gupta, [09-10-2025 10:25]
+/set_trend
+
+ShivamAlgoBot, [09-10-2025 10:25]
+📝 Usage: /set_trend SYMBOL TIMEFRAME TREND
+
+Symbols: XAUUSD, EURUSD, GBPUSD, etc.
+Timeframes: 5m, 15m, 1h, 1d
+Trends: BULLISH, BEARISH, NEUTRAL
+
+⚠️ This sets MANUAL mode - TradingView signals won't auto-update
+Use /set_auto to allow auto updates
+
+Example: /set_trend XAUUSD 1h BULLISH
+
+Shivam Kumar Gupta, [09-10-2025 10:26]
+/trend_matrix
+
+ShivamAlgoBot, [09-10-2025 10:26]
+🎯 Complete Trend Matrix
+
+XAUUSD
+  5m: 🟢 BULLISH 🔄
+  15m: 🟢 BULLISH 🔄
+  1h: 🔴 BEARISH 🔄
+  1d: 🟢 BULLISH 🔄
+─────────────
+EURUSD
+  5m: ⚪ NEUTRAL 🔄
+  15m: 🟢 BULLISH 🔄
+  1h: 🟢 BULLISH 🔄
+  1d: ⚪ NEUTRAL 🔄
+  ✅ LOGIC1: BULLISH
+  ✅ LOGIC2: BULLISH
+─────────────
+GBPUSD
+  5m: ⚪ NEUTRAL 🔄
+  15m: 🟢 BULLISH 🔄
+  1h: 🟢 BULLISH 🔄
+  1d: ⚪ NEUTRAL 🔄
+  ✅ LOGIC1: BULLISH
+  ✅ LOGIC2: BULLISH
+─────────────
+USDJPY
+  5m: ⚪ NEUTRAL 🔄
+  15m: ⚪ NEUTRAL 🔄
+  1h: ⚪ NEUTRAL 🔄
+  1d: ⚪ NEUTRAL 🔄
+─────────────
+USDCAD
+  5m: ⚪ NEUTRAL 🔄
+  15m: ⚪ NEUTRAL 🔄
+  1h: ⚪ NEUTRAL 🔄
+  1d: ⚪ NEUTRAL 🔄
+─────────────
+
+Legend: 🟢BULLISH 🔴BEARISH ⚪NEUTRAL 🔒MANUAL 🔄AUTO
+
+Shivam Kumar Gupta, [09-10-2025 10:26]
+/set_trend XAUUSD 1h BULLISH
+
+ShivamAlgoBot, [09-10-2025 10:26]
+🔒 Manual Trend Set
+XAUUSD 1h → BULLISH (MANUAL)
+⚠️ TradingView signals won't auto-update this
+Use /set_auto XAUUSD 1h to allow auto updates
+
+Shivam Kumar Gupta, [09-10-2025 10:26]
+/set_auto XAUUSD 1h BULLISH
+
+ShivamAlgoBot, [09-10-2025 10:26]
+🔄 Auto Mode Enabled
+XAUUSD 1h → BULLISH (AUTO)
+📡 Now accepting TradingView signals
+
+Shivam Kumar Gupta, [09-10-2025 10:26]
+/trend_matrix
+
+ShivamAlgoBot, [09-10-2025 10:26]
+🎯 Complete Trend Matrix
+
+XAUUSD
+  5m: 🟢 BULLISH 🔄
+  15m: 🟢 BULLISH 🔄
+  1h: 🟢 BULLISH 🔄
+  1d: 🟢 BULLISH 🔄
+  ✅ LOGIC1: BULLISH
+  ✅ LOGIC2: BULLISH
+  ✅ LOGIC3: BULLISH
+─────────────
+EURUSD
+  5m: ⚪ NEUTRAL 🔄
+  15m: 🟢 BULLISH 🔄
+  1h: 🟢 BULLISH 🔄
+  1d: ⚪ NEUTRAL 🔄
+  ✅ LOGIC1: BULLISH
+  ✅ LOGIC2: BULLISH
+─────────────
+GBPUSD
+  5m: ⚪ NEUTRAL 🔄
+  15m: 🟢 BULLISH 🔄
+  1h: 🟢 BULLISH 🔄
+  1d: ⚪ NEUTRAL 🔄
+  ✅ LOGIC1: BULLISH
+  ✅ LOGIC2: BULLISH
+─────────────
+USDJPY
+  5m: ⚪ NEUTRAL 🔄
+  15m: ⚪ NEUTRAL 🔄
+  1h: ⚪ NEUTRAL 🔄
+  1d: ⚪ NEUTRAL 🔄
+─────────────
+USDCAD
+  5m: ⚪ NEUTRAL 🔄
+  15m: ⚪ NEUTRAL 🔄
+  1h: ⚪ NEUTRAL 🔄
+  1d: ⚪ NEUTRAL 🔄
+─────────────
+
+Legend: 🟢BULLISH 🔴BEARISH ⚪NEUTRAL 🔒MANUAL 🔄AUTO
+
+ShivamAlgoBot, [09-10-2025 12:45]
+📊 XAUUSD 15M Trend Updated: BEAR
+
+ShivamAlgoBot, [09-10-2025 15:00]
+📊 XAUUSD 15M Trend Updated: BULL
+
+ShivamAlgoBot, [09-10-2025 17:30]
+📊 XAUUSD 1H Trend Updated: BULL
+
+ShivamAlgoBot, [09-10-2025 18:30]
+📊 XAUUSD 1H Bias Updated: BULL
+
+Shivam Kumar Gupta, [09-10-2025 19:01]
+/trend_matrix
+
+ShivamAlgoBot, [09-10-2025 19:01]
+🎯 Complete Trend Matrix
+
+XAUUSD
+  5m: 🟢 BULLISH 🔄
+  15m: 🟢 BULLISH 🔄
+  1h: 🟢 BULLISH 🔄
+  1d: 🟢 BULLISH 🔄
+  ✅ LOGIC1: BULLISH
+  ✅ LOGIC2: BULLISH
+  ✅ LOGIC3: BULLISH
+─────────────
+EURUSD
+  5m: ⚪ NEUTRAL 🔄
+  15m: 🟢 BULLISH 🔄
+  1h: 🟢 BULLISH 🔄
+  1d: ⚪ NEUTRAL 🔄
+  ✅ LOGIC1: BULLISH
+  ✅ LOGIC2: BULLISH
+─────────────
+GBPUSD
+  5m: ⚪ NEUTRAL 🔄
+  15m: 🟢 BULLISH 🔄
+  1h: 🟢 BULLISH 🔄
+  1d: ⚪ NEUTRAL 🔄
+  ✅ LOGIC1: BULLISH
+  ✅ LOGIC2: BULLISH
+─────────────
+USDJPY
+  5m: ⚪ NEUTRAL 🔄
+  15m: ⚪ NEUTRAL 🔄
+  1h: ⚪ NEUTRAL 🔄
+  1d: ⚪ NEUTRAL 🔄
+─────────────
+USDCAD
+  5m: ⚪ NEUTRAL 🔄
+  15m: ⚪ NEUTRAL 🔄
+  1h: ⚪ NEUTRAL 🔄
+  1d: ⚪ NEUTRAL 🔄
+─────────────
+
+Legend: 🟢BULLISH 🔴BEARISH ⚪NEUTRAL 🔒MANUAL 🔄AUTO
+
+ShivamAlgoBot, [09-10-2025 19:30]
+📊 XAUUSD 15M Trend Updated: BEAR
+
+ShivamAlgoBot, [09-10-2025 20:30]
+📊 XAUUSD 1H Trend Updated: BEAR
+
+Shivam Kumar Gupta, [09-10-2025 20:31]
+/trend_matrix
+
+ShivamAlgoBot, [09-10-2025 20:31]
+🎯 Complete Trend Matrix
+
+XAUUSD
+  5m: 🟢 BULLISH 🔄
+  15m: 🔴 BEARISH 🔄
+  1h: 🔴 BEARISH 🔄
+  1d: 🟢 BULLISH 🔄
+  ✅ LOGIC1: BEARISH
+  ✅ LOGIC2: BEARISH
+─────────────
+EURUSD
+  5m: ⚪ NEUTRAL 🔄
+  15m: 🟢 BULLISH 🔄
+  1h: 🟢 BULLISH 🔄
+  1d: ⚪ NEUTRAL 🔄
+  ✅ LOGIC1: BULLISH
+  ✅ LOGIC2: BULLISH
+─────────────
+GBPUSD
+  5m: ⚪ NEUTRAL 🔄
+  15m: 🟢 BULLISH 🔄
+  1h: 🟢 BULLISH 🔄
+  1d: ⚪ NEUTRAL 🔄
+  ✅ LOGIC1: BULLISH
+  ✅ LOGIC2: BULLISH
+─────────────
+USDJPY
+  5m: ⚪ NEUTRAL 🔄
+  15m: ⚪ NEUTRAL 🔄
+  1h: ⚪ NEUTRAL 🔄
+  1d: ⚪ NEUTRAL 🔄
+─────────────
+USDCAD
+  5m: ⚪ NEUTRAL 🔄
+  15m: ⚪ NEUTRAL 🔄
+  1h: ⚪ NEUTRAL 🔄
+  1d: ⚪ NEUTRAL 🔄
+─────────────
+
+Legend: 🟢BULLISH 🔴BEARISH ⚪NEUTRAL 🔒MANUAL 🔄AUTO
+
+Shivam Kumar Gupta, [09-10-2025 20:33]
+/set_trend XAUUSD 5m BEARISH
+
+ShivamAlgoBot, [09-10-2025 20:33]
+🔒 Manual Trend Set
+XAUUSD 5m → BEARISH (MANUAL)
+⚠️ TradingView signals won't auto-update this
+Use /set_auto XAUUSD 5m to allow auto updates
+
+Shivam Kumar Gupta, [09-10-2025 20:34]
+/set_auto XAUUSD 5m BEARISH
+
+ShivamAlgoBot, [09-10-2025 20:34]
+🔄 Auto Mode Enabled
+XAUUSD 5m → BEARISH (AUTO)
+📡 Now accepting TradingView signals
+
+Shivam Kumar Gupta, [09-10-2025 20:34]
+/trend_matrix
+
+ShivamAlgoBot, [09-10-2025 20:34]
+🎯 Complete Trend Matrix
+
+XAUUSD
+  5m: 🔴 BEARISH 🔄
+  15m: 🔴 BEARISH 🔄
+  1h: 🔴 BEARISH 🔄
+  1d: 🟢 BULLISH 🔄
+  ✅ LOGIC1: BEARISH
+  ✅ LOGIC2: BEARISH
+─────────────
+EURUSD
+  5m: ⚪ NEUTRAL 🔄
+  15m: 🟢 BULLISH 🔄
+  1h: 🟢 BULLISH 🔄
+  1d: ⚪ NEUTRAL 🔄
+  ✅ LOGIC1: BULLISH
+  ✅ LOGIC2: BULLISH
+─────────────
+GBPUSD
+  5m: ⚪ NEUTRAL 🔄
+  15m: 🟢 BULLISH 🔄
+  1h: 🟢 BULLISH 🔄
+  1d: ⚪ NEUTRAL 🔄
+  ✅ LOGIC1: BULLISH
+  ✅ LOGIC2: BULLISH
+─────────────
+USDJPY
+  5m: ⚪ NEUTRAL 🔄
+  15m: ⚪ NEUTRAL 🔄
+  1h: ⚪ NEUTRAL 🔄
+  1d: ⚪ NEUTRAL 🔄
+─────────────
+USDCAD
+  5m: ⚪ NEUTRAL 🔄
+  15m: ⚪ NEUTRAL 🔄
+  1h: ⚪ NEUTRAL 🔄
+  1d: ⚪ NEUTRAL 🔄
+─────────────
+
+Legend: 🟢BULLISH 🔴BEARISH ⚪NEUTRAL 🔒MANUAL 🔄AUTO
+
+ShivamAlgoBot, [09-10-2025 22:05]
+🎯 NEW TRADE #1
+Strategy: LOGIC1
+Symbol: XAUUSD
+Direction: SELL
+Entry: 3998.53000
+SL: 4018.53000
+TP: 3968.53000
+Lots: 0.05
+Risk: 1:1.5 RR
+
+ShivamAlgoBot, [09-10-2025 22:25]
+✅ TRADE CLOSED
+Reason: MT5_AUTO_CLOSED
+Symbol: XAUUSD
+Strategy: LOGIC1
+PnL: $153.75
+
+ShivamAlgoBot, [09-10-2025 22:30]
+📊 XAUUSD 1H Bias Updated: BEAR
+
+ShivamAlgoBot, [09-10-2025 23:30]
+📊 XAUUSD 1H Bias Updated: BEAR
+
+ShivamAlgoBot, [10-10-2025 02:00]
+📊 XAUUSD 15M Trend Updated: BULL
+
+Shivam Kumar Gupta, [10-10-2025 02:06]
+/trend_matrix
+
+ShivamAlgoBot, [10-10-2025 02:06]
+🎯 Complete Trend Matrix
+
+XAUUSD
+  5m: 🔴 BEARISH 🔄
+  15m: 🟢 BULLISH 🔄
+  1h: 🔴 BEARISH 🔄
+  1d: 🟢 BULLISH 🔄
+─────────────
+EURUSD
+  5m: ⚪ NEUTRAL 🔄
+  15m: 🟢 BULLISH 🔄
+  1h: 🟢 BULLISH 🔄
+  1d: ⚪ NEUTRAL 🔄
+  ✅ LOGIC1: BULLISH
+  ✅ LOGIC2: BULLISH
+─────────────
+GBPUSD
+  5m: ⚪ NEUTRAL 🔄
+  15m: 🟢 BULLISH 🔄
+  1h: 🟢 BULLISH 🔄
+  1d: ⚪ NEUTRAL 🔄
+  ✅ LOGIC1: BULLISH
+  ✅ LOGIC2: BULLISH
+─────────────
+USDJPY
+  5m: ⚪ NEUTRAL 🔄
+  15m: ⚪ NEUTRAL 🔄
+  1h: ⚪ NEUTRAL 🔄
+  1d: ⚪ NEUTRAL 🔄
+─────────────
+USDCAD
+  5m: ⚪ NEUTRAL 🔄
+  15m: ⚪ NEUTRAL 🔄
+  1h: ⚪ NEUTRAL 🔄
+  1d: ⚪ NEUTRAL 🔄
+─────────────
+
+Legend: 🟢BULLISH 🔴BEARISH ⚪NEUTRAL 🔒MANUAL 🔄AUTO
+
+Shivam Kumar Gupta, [10-10-2025 02:32]
+/set_trend XAUUSD 15m BEARISH
+
+ShivamAlgoBot, [10-10-2025 02:32]
+🔒 Manual Trend Set
+XAUUSD 15m → BEARISH (MANUAL)
+⚠️ TradingView signals won't auto-update this
+Use /set_auto XAUUSD 15m to allow auto updates
+
+Shivam Kumar Gupta, [10-10-2025 02:32]
+/set_auto XAUUSD 15m BEARISH
+
+ShivamAlgoBot, [10-10-2025 02:32]
+🔄 Auto Mode Enabled
+XAUUSD 15m → BEARISH (AUTO)
+📡 Now accepting TradingView signals
+
+Shivam Kumar Gupta, [10-10-2025 02:32]
+/trend_matrix
+
+ShivamAlgoBot, [10-10-2025 02:32]
+🎯 Complete Trend Matrix
+
+XAUUSD
+  5m: 🔴 BEARISH 🔄
+  15m: 🔴 BEARISH 🔄
+  1h: 🔴 BEARISH 🔄
+  1d: 🟢 BULLISH 🔄
+  ✅ LOGIC1: BEARISH
+  ✅ LOGIC2: BEARISH
+─────────────
+EURUSD
+  5m: ⚪ NEUTRAL 🔄
+  15m: 🟢 BULLISH 🔄
+  1h: 🟢 BULLISH 🔄
+  1d: ⚪ NEUTRAL 🔄
+  ✅ LOGIC1: BULLISH
+  ✅ LOGIC2: BULLISH
+─────────────
+GBPUSD
+  5m: ⚪ NEUTRAL 🔄
+  15m: 🟢 BULLISH 🔄
+  1h: 🟢 BULLISH 🔄
+  1d: ⚪ NEUTRAL 🔄
+  ✅ LOGIC1: BULLISH
+  ✅ LOGIC2: BULLISH
+─────────────
+USDJPY
+  5m: ⚪ NEUTRAL 🔄
+  15m: ⚪ NEUTRAL 🔄
+  1h: ⚪ NEUTRAL 🔄
+  1d: ⚪ NEUTRAL 🔄
+─────────────
+USDCAD
+  5m: ⚪ NEUTRAL 🔄
+  15m: ⚪ NEUTRAL 🔄
+  1h: ⚪ NEUTRAL 🔄
+  1d: ⚪ NEUTRAL 🔄
+─────────────
+
+Legend: 🟢BULLISH 🔴BEARISH ⚪NEUTRAL 🔒MANUAL 🔄AUTO
+
+Shivam Kumar Gupta, [10-10-2025 02:33]
+/start
+
+ShivamAlgoBot, [10-10-2025 02:33]
+🤖 Zepix Trading Bot v2.0
+✅ Bot is active with enhanced features
+📊 1:1.5 Risk-Reward System Active
+🔄 Re-entry System Enabled
+🔄 SL Hunt Re-entry System Enabled
+⚡ Live Price Advanced System Working
+
+📊 TRADING CONTROL
+/status - Bot & trade status
+/pause - Pause trading
+/resume - Resume trading
+/signal_status - Live signals
+/simulation_mode [on/off] - Toggle simulation mode
+
+📈 PERFORMANCE & ANALYTICS
+/performance - Trading metrics
+/stats - Risk statistics
+/trades - Open positions
+/chains - Re-entry chains
+
+⚙️ STRATEGY CONTROL
+/logic_status - View all logic status
+/logic1_on, /logic1_off - 1H+15M→5M
+/logic2_on, /logic2_off - 1H+15M→15M
+/logic3_on, /logic3_off - D+1H→1H
+
+🔄 ADVANCED RE-ENTRY SYSTEM
+/tp_system [on/off/status] - TP continuation
+/sl_hunt [on/off/status] - SL hunt re-entry
+/tp_report - 30-day re-entry stats
+/reentry_config - View all re-entry settings
+/set_monitor_interval [30-300] - Price monitor interval
+/set_sl_offset [1-5] - SL hunt offset pips
+/set_cooldown [30-300] - SL hunt cooldown
+/set_recovery_time [1-10] - Price recovery window
+/set_max_levels [1-5] - Max chain levels
+/set_sl_reduction [0.3-0.7] - SL reduction %
+/reset_reentry_config - Reset to defaults
+
+📍 TREND MANAGEMENT
+/show_trends - All trends
+/trend_matrix - Complete matrix
+/set_trend SYMBOL TF TREND - Manual trend
+/set_auto SYMBOL TF - Auto mode
+/trend_mode SYMBOL TF - Check mode
+
+💰 RISK & LOT MANAGEMENT
+/view_risk_caps - Daily/Lifetime caps & loss
+/set_daily_cap [amount] - Set daily limit
+/set_lifetime_cap [amount] - Set lifetime limit
+/set_risk_tier BALANCE DAILY LIFETIME - Complete tier
+/clear_loss_data - Reset lifetime loss
+
+/view_sl_config - Symbol SL settings
+/set_symbol_sl SYMBOL VOL SL - Update symbol SL
+/update_volatility SYMBOL LEVEL - Quick volatility
+
+/lot_size_status - Lot settings
+/set_lot_size TIER LOT - Override lot size

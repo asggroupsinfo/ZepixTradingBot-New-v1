@@ -1,0 +1,104 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Windows\system32> # Step 1: Purana Folder Delete Karo
+>> cd C:\Users\shivamkumar14102801
+>> Remove-Item -Recurse -Force ZepixTradingBot-old-v2
+>>
+>> # Step 2: GitHub Se Fresh Clone Karo
+>> git clone https://github.com/asggroupsinfo/ZepixTradingBot-old-v2.git
+>> cd ZepixTradingBot-old-v2
+>>
+>> # Step 3: .env File Banao (Automated Script Se Pehle)
+>> notepad .env
+Cloning into 'ZepixTradingBot-old-v2'...
+remote: Enumerating objects: 4256, done.
+remote: Counting objects: 100% (4256/4256), done.
+remote: Compressing objects: 100% (3627/3627), done.
+remote: Total 4256 (delta 576), reused 4221 (delta 541), pack-reused 0 (from 0)
+Receiving objects: 100% (4256/4256), 27.07 MiB | 12.23 MiB/s, done.
+Resolving deltas: 100% (576/576), done.
+Updating files: 100% (3649/3649), done.
+PS C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2> # Step 4: Automated Deployment Script Run Karo (Port 80)
+>> .\windows_setup_admin.bat
+============================================================
+ZEPIX TRADING BOT - ADMIN MODE DEPLOYMENT (PORT 80)
+============================================================
+
+Γ£ô Running as Administrator
+
+[1/7] Checking Python installation...
+Γ£ô Python 64-bit detected
+
+[2/7] Cleaning old virtual environment...
+Removing old venv...
+Γ£ô Clean state ready
+
+[3/7] Creating fresh virtual environment...
+Γ£ô Virtual environment created
+
+[4/7] Activating virtual environment...
+Γ£ô Virtual environment activated
+
+[5/7] Upgrading pip...
+Γ£ô pip upgraded
+
+[6/7] Installing dependencies (this may take 1-2 minutes)...
+Γ£ô All dependencies installed
+
+[7/7] Setting up MT5 connection...
+============================================================
+MT5 AUTO-CONNECTION SETUP
+============================================================
+🔍 Searching for MetaTrader 5 installation...
+✅ Found MT5 at: C:\Program Files\XM Global MT5
+
+🔗 Creating symlink for Python MT5 package compatibility...
+✅ Symlink already exists: C:\Program Files\MetaTrader 5
+
+🔍 Verifying MT5 connection...
+✅ MT5 Connected Successfully!
+   Account: 308646228
+   Balance: $9917.50
+   Server: XMGlobal-MT5 6
+
+✅ MT5 AUTO-SETUP COMPLETE!
+Γ£ô MT5 connection verified with admin rights
+
+Checking .env configuration...
+Γ£ô .env file found
+
+============================================================
+Γ£à ADMIN DEPLOYMENT COMPLETE!
+============================================================
+
+Γ£à MODE: LIVE TRADING (MT5 connected)
+
+Starting Zepix Trading Bot on PORT 80 (Admin Mode)...
+Press Ctrl+C to stop the bot
+
+🔧 Config loaded - MT5 Login: 308646228, Server: XMGlobal-MT5 6
+==================================================
+ZEPIX TRADING BOT v2.0
+==================================================
+Starting server on 0.0.0.0:80
+Features enabled:
+✓ Fixed lot sizes
+✓ Re-entry system
+✓ SL hunting protection
+✓ 1:1.5 Risk-Reward
+✓ Progressive SL reduction
+==================================================
+←[32mINFO←[0m:     Started server process [←[36m6460←[0m]
+←[32mINFO←[0m:     Waiting for application startup.
+✅ MT5 connection established
+Account Balance: $9917.50
+✅ Trend manager set in Telegram bot
+INFO:price_monitor_service:✅ Price Monitor Service started
+✅ Trading engine initialized successfully
+✅ Price monitor service started
+✅ Telegram bot polling started
+←[32mINFO←[0m:     Application startup complete.
+←[32mINFO←[0m:     Uvicorn running on ←[1mhttp://0.0.0.0:80←[0m (Press CTRL+C to quit)

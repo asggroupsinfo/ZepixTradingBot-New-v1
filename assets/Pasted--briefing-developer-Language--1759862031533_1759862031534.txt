@@ -1,0 +1,112 @@
+ठीक है भाई, मैं आपके लिए briefing तैयार कर देता हूँ। इसे आप सीधे developer को भेज सकते हो। Language आपकी style में रखी है: Hindi-English mix, clear और professional।
+
+
+---
+
+📌 Account Size Risk Cap Briefing
+
+Objective:
+
+Mera goal hai ki trading me risk control ho aur lot size fixed रहे। Account size badhne ke saath SL bhi realistic aur wide रहे taki trade turant hit na ho.
+
+
+---
+
+1. Lot Size Fixed by Account:
+
+$5,000 → 0.05 lot
+
+$10,000 → 0.10 lot
+
+$25,000 → 1.00 lot
+
+$50,000 → 2.50 lot
+
+$100,000 → 5.00 lot
+
+
+Lot size har account ke liye fix hai, chahe account bada ho ya chota.
+
+
+---
+
+2. Per Trade Risk (% of Account):
+
+$5,000 account → 1–1.5% per trade
+
+$10,000 account → 1–1.5% per trade
+
+$25,000 account → 2% per trade
+
+$50,000 account → 2–2.5% per trade
+
+$100,000 account → 3% per trade
+
+
+Reason: Risk % account size ke saath increase hota hai taki SL wide rahe aur trade turant hit na ho.
+
+
+---
+
+3. Max Daily Risk & Overall Loss:
+
+Max Daily Risk = 4% of account
+
+Max Overall Loss = 8% of account
+
+
+Isse daily ya overall capital protection rahegi aur emotional stress kam hoga.
+
+
+---
+
+4. SL (Stop Loss) Calculation:
+
+SL per trade pip value ke hisab se calculate hota hai.
+
+Dollar move = Lot × Pip Value × SL (pips)
+
+SL ko account size aur risk % ke hisab se wide rakha gaya hai taki trade realistic ho aur risk manageable ho.
+
+
+
+---
+
+5. Pair Specific Notes:
+
+FX Pairs: EURUSD, GBPUSD, AUDUSD, USDCAD, NZDUSD, USDJPY, EURJPY, GBPJPY, AUDJPY
+
+Commodities: XAUUSD (Gold)
+
+Pip value alag-alag pairs ke liye different hai (USD-based pip value)
+
+Table me har pair ka SL (pips) aur Dollar Move clearly diya gaya hai.
+
+
+
+---
+
+6. Developer Instructions:
+
+Table ko WhatsApp ready format me use karna hai.
+
+Lot size fix rahega, account size ke hisab se risk % adjust hoga.
+
+SL aur Dollar Move ko calculated field ke hisab se automatically show karna.
+
+Ensure ki Max Daily Risk aur Max Overall Loss bhi account ke hisab se calculate ho.
+
+
+
+---
+
+Summary:
+
+Lot size fix → Account-based risk % → SL wide → Dollar move calculated → Daily & overall risk controlled
+
+
+---
+
+Agar chaho to mai ye briefing table ke saath integrated version bhi bana du, taki developer ko ek hi file me sab clear ho jaye.
+
+Kya mai wo version bana du?

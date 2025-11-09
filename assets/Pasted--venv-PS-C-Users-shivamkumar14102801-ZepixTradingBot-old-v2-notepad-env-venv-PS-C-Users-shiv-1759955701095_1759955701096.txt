@@ -1,0 +1,51 @@
+(venv) PS C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2> notepad .env
+(venv) PS C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2> python test_credentials.py
+==================================================
+CREDENTIAL LOADING TEST
+==================================================
+
+MT5_LOGIN: 308646228
+MT5_PASSWORD: ***************
+MT5_SERVER: XMGlobal-MT5 6
+TELEGRAM_TOKEN: ********************
+TELEGRAM_CHAT_ID: 2139792302
+
+==================================================
+🔧 Config loaded - MT5 Login: 308646228, Server: XMGlobal-MT5 6
+
+CONFIG CLASS TEST
+==================================================
+MT5 Login (from Config): 308646228
+MT5 Password (from Config): ***************
+MT5 Server (from Config): XMGlobal-MT5 6
+==================================================
+
+✅ ALL CREDENTIALS LOADED SUCCESSFULLY!
+(venv) PS C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2> python main.py --host 0.0.0.0 --port 80
+Traceback (most recent call last):
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\main.py", line 6, in <module>
+    from fastapi import FastAPI, Request, HTTPException
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\fastapi\__init__.py", line 7, in <module>
+    from .applications import FastAPI as FastAPI
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\fastapi\applications.py", line 16, in <module>
+    from fastapi import routing
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\fastapi\routing.py", line 22, in <module>
+    from fastapi import params
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\fastapi\params.py", line 5, in <module>
+    from fastapi.openapi.models import Example
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\fastapi\openapi\models.py", line 4, in <module>
+    from fastapi._compat import (
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\fastapi\_compat.py", line 20, in <module>
+    from fastapi.exceptions import RequestErrorModel
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\fastapi\exceptions.py", line 3, in <module>
+    from pydantic import BaseModel, create_model
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\pydantic\__init__.py", line 372, in __getattr__
+    module = import_module(module_name, package=package)
+  File "C:\Program Files\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\pydantic\main.py", line 11, in <module>
+    import pydantic_core
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\pydantic_core\__init__.py", line 6, in <module>
+    from ._pydantic_core import (
+ModuleNotFoundError: No module named 'pydantic_core._pydantic_core'
+(venv) PS C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2>

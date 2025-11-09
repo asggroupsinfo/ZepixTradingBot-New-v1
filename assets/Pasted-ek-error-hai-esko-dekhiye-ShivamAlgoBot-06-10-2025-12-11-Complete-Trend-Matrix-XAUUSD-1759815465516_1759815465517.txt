@@ -1,0 +1,321 @@
+ek error hai esko dekhiye :-
+
+"ShivamAlgoBot, [06-10-2025 12:11]
+🎯 Complete Trend Matrix
+XAUUSD
+  5m: 🟢 BULLISH 🔄
+  15m: 🟢 BULLISH 🔄
+  1h: 🟢 BULLISH 🔄
+  1d: 🟢 BULLISH 🔄
+  ✅ LOGIC1: BULLISH
+  ✅ LOGIC2: BULLISH
+  ✅ LOGIC3: BULLISH
+─────────────
+EURUSD
+  5m: ⚪ NEUTRAL 🔄
+  15m: ⚪ NEUTRAL 🔄
+  1h: ⚪ NEUTRAL 🔄
+  1d: ⚪ NEUTRAL 🔄
+─────────────
+GBPUSD
+  5m: ⚪ NEUTRAL 🔄
+  15m: ⚪ NEUTRAL 🔄
+  1h: ⚪ NEUTRAL 🔄
+  1d: ⚪ NEUTRAL 🔄
+─────────────
+USDJPY
+  5m: ⚪ NEUTRAL 🔄
+  15m: ⚪ NEUTRAL 🔄
+  1h: ⚪ NEUTRAL 🔄
+  1d: ⚪ NEUTRAL 🔄
+─────────────
+USDCAD
+  5m: ⚪ NEUTRAL 🔄
+  15m: ⚪ NEUTRAL 🔄
+  1h: ⚪ NEUTRAL 🔄
+  1d: ⚪ NEUTRAL 🔄
+─────────────
+Legend: 🟢BULLISH 🔴BEARISH ⚪NEUTRAL 🔒MANUAL 🔄AUTO
+ShivamAlgoBot, [06-10-2025 13:10]
+
+🎯 NEW TRADE #1
+Strategy: LOGIC1
+Symbol: XAUUSD
+Direction: BUY
+Entry: 3936.49000
+SL: 3928.49000
+TP: 3944.49000
+Lots: 0.10
+Risk: 1:1 RR
+
+ShivamAlgoBot, [06-10-2025 13:32]
+❌ Failed to close trade 449995525
+ShivamAlgoBot, [06-10-2025 13:32]
+❌ Failed to close trade 449995525
+ShivamAlgoBot, [06-10-2025 13:32]
+❌ Failed to close trade 449995525
+ShivamAlgoBot, [06-10-2025 13:32]
+❌ Failed to close trade 449995525
+ShivamAlgoBot, [06-10-2025 13:32]
+❌ Failed to close trade 449995525
+ShivamAlgoBot, [06-10-2025 14:27]
+❌ Failed to close trade 449995525
+ShivamAlgoBot, [06-10-2025 14:27]
+❌ Failed to close trade 449995525
+ShivamAlgoBot, [06-10-2025 14:27]
+❌ Failed to close trade 449995525
+ShivamAlgoBot, [06-10-2025 14:27]
+❌ Failed to close trade 449995525
+ShivamAlgoBot, [06-10-2025 14:30]
+📊 XAUUSD 1H Bias Updated: BULL
+ShivamAlgoBot, [06-10-2025 14:33]
+❌ Failed to close trade 449995525
+ShivamAlgoBot, [06-10-2025 14:33]
+❌ Failed to close trade 449995525"
+
+
+
+log data: -"Microsoft Windows [Version 10.0.20348.4171]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Windows\system32>cd C:\Users\shivamkumar14102801\ZepixTrandingbot-Old
+
+C:\Users\shivamkumar14102801\ZepixTrandingbot-Old>venv\Scripts\activate
+
+(venv) C:\Users\shivamkumar14102801\ZepixTrandingbot-Old>python main.py --host 0.0.0.0 --port 80
+✅ Database initialized successfully at trading_data.db
+✅ Schema updated with all 17 trade columns
+✅ Database initialized successfully at trading_data.db
+✅ Schema updated with all 17 trade columns
+C:\Users\shivamkumar14102801\ZepixTrandingbot-Old\main.py:35: DeprecationWarning:
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+
+  @app.on_event("startup")
+==================================================
+ZEPIX TRADING BOT v2.0
+==================================================
+Starting server on 0.0.0.0:80
+Features enabled:
+✓ Fixed lot sizes
+✓ Re-entry system
+✓ SL hunting protection
+✓ 1:1 Risk-Reward
+✓ Progressive SL reduction
+==================================================
+←[32mINFO←[0m:     Started server process [←[36m8220←[0m]
+←[32mINFO←[0m:     Waiting for application startup.
+✅ MT5 connection established
+Account Balance: $10146.70
+✅ Trend manager set in Telegram bot
+✅ Trading engine initialized successfully
+✅ Telegram bot polling started
+←[32mINFO←[0m:     Application startup complete.
+←[32mINFO←[0m:     Uvicorn running on ←[1mhttp://0.0.0.0:80←[0m (Press CTRL+C to quit)
+←[32mINFO←[0m:     34.79.81.77:47944 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[33mWARNING←[0m:  Invalid HTTP request received.
+←[32mINFO←[0m:     195.184.76.19:59337 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[33mWARNING←[0m:  Invalid HTTP request received.
+←[32mINFO←[0m:     93.123.109.214:53422 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[33mWARNING←[0m:  Invalid HTTP request received.
+←[32mINFO←[0m:     93.123.109.214:53436 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     195.184.76.241:40195 - "←[1mGET /favicon.ico HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.40:45170 - "←[1mGET /.env HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.40:45172 - "←[1mPOST / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+📨 Webhook received: {
+  "type": "entry",
+  "symbol": "XAUUSD",
+  "signal": "sell",
+  "tf": "15m",
+  "price": 3925.875,
+  "strategy": "ZepixPremium"
+}
+📨 Received alert: {'type': 'entry', 'symbol': 'XAUUSD', 'signal': 'sell', 'tf': '15m', 'price': 3925.875, 'strategy': 'ZepixPremium'}
+✅ Alert validation successful
+❌ Signal BEARISH doesn't match trend BULLISH
+←[32mINFO←[0m:     34.212.75.30:59818 - "←[1mPOST /webhook HTTP/1.1←[0m" ←[32m200 OK←[0m
+←[32mINFO←[0m:     204.76.203.212:36356 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     192.155.91.55:54012 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     196.251.70.214:51898 - "←[1mGET /.env HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     204.76.203.219:52590 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     20.65.152.136:44666 - "←[1mGET /developmentserver/metadatauploader HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[33mWARNING←[0m:  Invalid HTTP request received.
+←[32mINFO←[0m:     93.123.109.214:33684 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[33mWARNING←[0m:  Invalid HTTP request received.
+←[32mINFO←[0m:     93.123.109.214:33694 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     5.253.86.21:30512 - "←[1mCONNECT www.cloudflare.com%3A443 HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:35410 - "←[1mGET /.env HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:46472 - "←[1mGET /debug/default/view?panel=config HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:36266 - "←[1mGET /images/.env HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:49712 - "←[1mGET /.env.save.1 HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:59292 - "←[1mGET /.json HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:42496 - "←[1mGET /library/.env HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:52918 - "←[1mGET /API/.env HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:36192 - "←[1mGET /client/.env HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:50204 - "←[1mGET /blogs/.env HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:59456 - "←[1mGET /settings/.env HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:40380 - "←[1mGET /.env.prod HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:50250 - "←[1mGET /html/.env HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:59446 - "←[1mGET /aws.yml HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:39514 - "←[1mGET /apis/.env HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:48138 - "←[1mGET /stage/.env HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:57442 - "←[1mGET /auth/.env HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:39190 - "←[1mGET /env.txt HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:50916 - "←[1mGET /test.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:34344 - "←[1mGET /platform/.env HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:45498 - "←[1mGET /data/.env HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:54956 - "←[1mGET /www/.env HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:37562 - "←[1mGET /developer/.env HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:48488 - "←[1mGET /home/.env HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:58878 - "←[1mGET /media/.env HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:40590 - "←[1mGET /.env-public HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:50016 - "←[1mGET /.env-apache HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:59026 - "←[1mGET /.env-logger HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:39574 - "←[1mGET /.env.twilio HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:49604 - "←[1mGET /.env-svelte HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:59946 - "←[1mGET /.env-python HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.224:41912 - "←[1mGET /.env-stripe HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+📨 Webhook received: {
+  "type": "entry",
+  "symbol": "XAUUSD",
+  "signal": "buy",
+  "tf": "5m",
+  "price": 3936.49,
+  "strategy": "ZepixPremium"
+}
+📨 Received alert: {'type': 'entry', 'symbol': 'XAUUSD', 'signal': 'buy', 'tf': '5m', 'price': 3936.49, 'strategy': 'ZepixPremium'}
+✅ Alert validation successful
+🔄 Symbol mapping: XAUUSD → GOLD
+✅ Order placed successfully: Ticket #449995525
+←[32mINFO←[0m:     52.32.178.7:35176 - "←[1mPOST /webhook HTTP/1.1←[0m" ←[32m200 OK←[0m
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+←[32mINFO←[0m:     78.153.140.40:47418 - "←[1mGET /.env HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.40:47434 - "←[1mPOST / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+Position 449995525 not found
+🔄 Symbol mapping: XAUUSD → GOLD
+Position 449995525 not found
+🔄 Symbol mapping: XAUUSD → GOLD
+Position 449995525 not found
+Position 449995525 not found
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+Position 449995525 not found
+🔄 Symbol mapping: XAUUSD → GOLD
+Position 449995525 not found
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+Position 449995525 not found
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+📨 Webhook received: {
+  "type": "entry",
+  "symbol": "XAUUSD",
+  "signal": "sell",
+  "tf": "5m",
+  "price": 3935.68,
+  "strategy": "ZepixPremium"
+}
+📨 Received alert: {'type': 'entry', 'symbol': 'XAUUSD', 'signal': 'sell', 'tf': '5m', 'price': 3935.68, 'strategy': 'ZepixPremium'}
+✅ Alert validation successful
+❌ Signal BEARISH doesn't match trend BULLISH
+←[32mINFO←[0m:     34.212.75.30:16370 - "←[1mPOST /webhook HTTP/1.1←[0m" ←[32m200 OK←[0m
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+←[32mINFO←[0m:     175.100.116.118:61194 - "←[1mCONNECT httpbin.org%3A443 HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     175.100.116.118:60598 - "←[1mGET http%3A//httpbin.org/headers HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     175.100.116.118:60144 - "←[1mCONNECT api.my-ip.io%3A443 HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[33mWARNING←[0m:  Invalid HTTP request received.
+←[33mWARNING←[0m:  Invalid HTTP request received.
+←[33mWARNING←[0m:  Invalid HTTP request received.
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+←[32mINFO←[0m:     204.76.203.219:50188 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+←[32mINFO←[0m:     93.174.93.12:60000 - "←[1mGET / HTTP/1.0←[0m" ←[31m404 Not Found←[0m
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+Position 449995525 not found
+🔄 Symbol mapping: XAUUSD → GOLD
+Position 449995525 not found
+🔄 Symbol mapping: XAUUSD → GOLD
+Position 449995525 not found
+←[33mWARNING←[0m:  Invalid HTTP request received.
+🔄 Symbol mapping: XAUUSD → GOLD
+Position 449995525 not found
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+📨 Webhook received: {
+  "type": "bias",
+  "symbol": "XAUUSD",
+  "signal": "bull",
+  "tf": "1h",
+  "price": 3942.61,
+  "strategy": "ZepixPremium"
+}
+📨 Received alert: {'type': 'bias', 'symbol': 'XAUUSD', 'signal': 'bull', 'tf': '1h', 'price': 3942.61, 'strategy': 'ZepixPremium'}
+✅ Alert validation successful
+✅ Trend updated: XAUUSD 1h → BULLISH (AUTO)
+←[32mINFO←[0m:     52.32.178.7:45890 - "←[1mPOST /webhook HTTP/1.1←[0m" ←[32m200 OK←[0m
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+←[33mWARNING←[0m:  Invalid HTTP request received.
+←[33mWARNING←[0m:  Invalid HTTP request received.
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+←[33mWARNING←[0m:  Invalid HTTP request received.
+←[32mINFO←[0m:     93.123.109.214:57610 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[33mWARNING←[0m:  Invalid HTTP request received.
+←[32mINFO←[0m:     93.123.109.214:57622 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+←[32mINFO←[0m:     204.76.203.212:47752 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+←[32mINFO←[0m:     216.180.246.65:21997 - "←[1mGET / HTTP/1.0←[0m" ←[31m404 Not Found←[0m
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+←[32mINFO←[0m:     176.97.210.9:33956 - "←[1mCONNECT api.my-ip.io%3A443 HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+←[32mINFO←[0m:     78.153.140.40:42556 - "←[1mGET /.env HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     78.153.140.40:42564 - "←[1mPOST / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+←[32mINFO←[0m:     103.252.89.75:59286 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+←[32mINFO←[0m:     Shutting down
+←[32mINFO←[0m:     Waiting for application shutdown.
+←[32mINFO←[0m:     Application shutdown complete.
+←[32mINFO←[0m:     Finished server process [←[36m8220←[0m]
+
+(venv) C:\Users\shivamkumar14102801\ZepixTrandingbot-Old>"

@@ -1,0 +1,318 @@
+Mujhe complete bot ko re-structure karna hai bot me kuch features ko complete hatana hai aur kuch ko update karna hai aisa kyu kha raha hu mai kal ek entry aayi thi "ShivamAlgoBot, [23-09-2025 13:50]
+🎯 NEW TRADE #1
+Strategy: LOGIC1
+Symbol: XAUUSD
+Direction: BUY
+Entry: 3758.84
+SL: 3758.83850
+TP1: 3758.84093
+TP2: 3758.84150
+TP3: 3758.84243
+Lots: 2.00
+
+ShivamAlgoBot, [23-09-2025 18:56]
+📊 Open Trades
+
+Trade #1
+Symbol: XAUUSD | BUY
+Strategy: LOGIC1
+Entry: 3758.84 | SL: 3758.8385000000003
+Open: 100%
+TP1: 3758.84093 | TP2: 3758.84150 | TP3: 3758.84243
+────────────────────"
+
+ye trade excute nahi huaa kyu itna pass pass sl calculate kiya hai bot na ki na enrtyy hui aur na take profit calculate itna pass calculate kiye ki wo bhi excute nahi ho sakta tha aise kon koi human to entry nahi lega to es ye mt5 ne bi bot ke process se trade excute nahi kiya  es liye mujhe kuch bot ke kuch features ko badalna hai aur kuch ko complete hata dena hai. 
+
+___________________________________________________________________________________________________________
+
+
+dekhiye ye 
+
+"1. RISK TIERS SYSTEM:
+json
+"risk_tiers": {
+  "5000": {"per_trade_cap": 150, "daily_loss_limit": 200, "max_total_loss": 500, "base_multiplier": 1.0},
+  "10000": {"per_trade_cap": 300, "daily_loss_limit": 400, "max_total_loss": 1000, "base_multiplier": 2.0}
+}
+Working Example:
+Account Balance: $7,000 → Risk Tier: $5,000 (Next tier $10,000 se kam hai)
+
+Per Trade Risk: Max $150 loss per trade
+
+Daily Loss Limit: Max $200 loss per day
+
+Lifetime Loss: Max $500 total loss
+
+Automatic Tier Upgrade:
+Balance $10,000+ → Tier upgrade to $10,000
+
+Per Trade Risk: $150 → $300 (Double ho jayega)
+
+Lots size automatically increase hoga
+
+" 
+change:- "Lots size automatically increase hoga" automaticaly increse nahi hoga ek jaise jaise account size badega waise waise lot size badega ek karam me 
+
+account size - 5000$ (lot size 0.05), 10000$ (lot size 0.10), 25000$ ((lot size 1), 100000 (lot size 5).
+
+aur maual cantrol karne ka feature esme add karna hai
+ /account lot size lot>chosse account size 5000$, 10000$, 25000$, 100000$> set lot size 0.05, 0.10, 1, 5.
+/change account lot size >chosse account size 5000$, 10000$, 25000$, 100000$> set lot size 0.05, 0.10, 1, 5.
+/current status of account lot size"
+
+rest feature wise hi rahege jo bot ke code me hai  RISK TIERS SYSTEM ka waise hi rahega no other change in this features.
+
+______________________________________________________________________________________________
+Next-
+
+"2. VOLATILITY-BASED RISK LEVELS:
+json
+"volatility_risk_levels": {
+  "LOW": {"base_per_trade_cap": 30, "base_sl_points": 7},
+  "MEDIUM": {"base_per_trade_cap": 50, "base_sl_points": 10},
+  "HIGH": {"base_per_trade_cap": 80, "base_sl_points": 15}
+}
+Symbol-wise Volatility:
+EURUSD: LOW volatility → 7 pips SL, $30 base risk
+
+XAUUSD: HIGH volatility → 15 pips SL, $80 base risk
+
+GBPJPY: HIGH volatility → 15 pips SL, $80 base risk
+
+Position Size Calculation Formula:
+python
+# Example: XAUUSD trade, Account: $5,000
+account_risk = $150 (from tier)
+volatility_risk = $80 (XAUUSD HIGH volatility)
+actual_risk = min($150, $80) = $80
+
+# SL points = 15 pips for XAUUSD
+lot_size = $80 / (15 pips * $1 per pip) = 5.33 lots
+# But max lots for XAUUSD = 2.0 (config me defined)
+final_lots = min(5.33, 2.0) = 2.0 lots"
+
+Change/completely remove:-
+
+VOLATILITY-BASED RISK LEVELS: me per trade cap wahi rahega jo abhi current bot ke code me hai par base sl point badlega es table me sabhi pairs ke liye define kiya gaya hai 
+"
+Risk Levels: LOW = $30 | MEDIUM = $50 | HIGH = $80
+-------------------------------------------------
+
+---------------- EURUSD (LOW) ----------------
+Account Size | Lot Size | 1 Pip Value | SL ($30 cap)
+----------------------------------------------------
+$5,000       | 0.05     | $0.50       | 60 pips
+$10,000      | 0.10     | $1.00       | 30 pips
+$25,000      | 1.00     | $10.00      | 3 pips
+$100,000     | 5.00     | $50.00      | 0.6 pips
+
+---------------- GBPUSD / AUDUSD / USDCAD / NZDUSD (MEDIUM) ----------------
+Account Size | Lot Size | 1 Pip Value | SL ($50 cap)
+----------------------------------------------------
+$5,000       | 0.05     | $0.50       | 100 pips
+$10,000      | 0.10     | $1.00       | 50 pips
+$25,000      | 1.00     | $10.00      | 5 pips
+$100,000     | 5.00     | $50.00      | 1 pips
+
+---------------- USDJPY (MEDIUM) ----------------
+Account Size | Lot Size | 1 Pip Value | SL ($50 cap)
+----------------------------------------------------
+$5,000       | 0.05     | $0.455      | 110 pips
+$10,000      | 0.10     | $0.91       | 55 pips
+$25,000      | 1.00     | $9.10       | 5.5 pips
+$100,000     | 5.00     | $45.50      | 1.1 pips
+
+---------------- EURJPY / GBPJPY / AUDJPY (HIGH) ----------------
+Account Size | Lot Size | 1 Pip Value | SL ($80 cap)
+----------------------------------------------------
+$5,000       | 0.05     | ~$0.45–0.46 | ~176 pips
+$10,000      | 0.10     | ~$0.90–0.92 | ~88 pips
+$25,000      | 1.00     | ~$9.0–9.2   | ~8.8 pips
+$100,000     | 5.00     | ~$45–46     | ~1.76 pips
+
+---------------- XAUUSD (Gold – HIGH) ----------------
+Account Size | Lot Size | 1 Pip Value | SL ($80 cap)
+----------------------------------------------------
+$5,000       | 0.05     | $0.05       | 1600 pips
+$10,000      | 0.10     | $0.10       | 800 pips
+$25,000      | 1.00     | $1.00       | 80 pips
+$100,000     | 5.00     | $5.00       | 16 pips"
+maine har ek pairs ke 1 pip ki value batai ki hai aur sabhi account size ke hisab se lot size batya hai aur uspe kitna pip ka SL hoga ye bhi batya hai volatility low, medium, high me bhi batya hai saath me sabhi pe sl kitne $ ka cap hoga ye bhi define ki hai es table ke hisab se sl per trade pe har ek pairs ka trade lagega trade entry pe.
+Note:- ye system sabhi pairs ke liye hoga mere sabhi pairs table me diye gaye hai aur mai yaha bhi de raha hu taki ye feature bante waqt skip na ho jaye EURUSD, GBPUSD, USDJPY, AUDUSD, USDCAD, NZDUSD, EURJPY, GBPJPY, AUDJPY and XAUUSD (Gold)”
+Note:- lot size main account me hi set kar diye hai aap to auto lot size calculate nahi karega.
+Note:- bot me phale se define hai en sabhi pairs ""EURUSD", "GBPUSD", "USDJPY", "AUDUSD", "USDCAD", "NZDUSD",    "EURJPY", "GBPJPY",    "AUDJPY",    "XAUUSD"" ke volatility kon sa pairs kitan volatile hai aur uska per tade risk cap kaya hai.
+
+_____________________________________________________________________________________________________
+
+Next :- 
+
+"3. FIBONACCI TAKE PROFIT SYSTEM - FULL WORKING
+Fibonacci Levels:
+json
+"fibonacci_levels": {"tp1": 0.618, "tp2": 1.0, "tp3": 1.618}
+Practical Example:
+BUY Trade: XAUUSD
+
+Entry Price: 1800.00
+
+SL Price: 1798.50 (15 pips = 1.5 points)
+
+Price Difference: 1800.00 - 1798.50 = 1.5 points
+
+TP Calculations:
+python
+# TP1 = Entry + (PriceDiff × 0.618)
+TP1 = 1800.00 + (1.5 × 0.618) = 1800.00 + 0.927 = 1800.927
+
+# TP2 = Entry + (PriceDiff × 1.0)  
+TP2 = 1800.00 + (1.5 × 1.0) = 1800.00 + 1.5 = 1801.50
+
+# TP3 = Entry + (PriceDiff × 1.618)
+TP3 = 1800.00 + (1.5 × 1.618) = 1800.00 + 2.427 = 1802.427
+Position Closing Strategy:
+TP1 Hit: 50% position close ✅
+
+TP2 Hit: 25% position close ✅
+
+TP3 Hit: 25% position close ✅
+
+Total: 100% position closed
+
+Advantage:
+Early Profit Booking (TP1 pe 50% profit secure)
+
+Let Profit Run (remaining 50% for higher TPs)
+
+Risk-Reward Optimized"
+
+Change/completely remove:- es feature ko complete remove kar dena hai. eske jagha naya features add karena hai. 
+
+Coustom Profit booking & re-enty features & sl hunting protection :- eske bare me pura samjhna hoga aur phale ye batana hoga ki ye posible hai es bot me ki nahi kyu ki maine jo eska solution soch hai usme mujhe doubt hai toda. phale mai solution bata deta hu. 
+
+Coustom Profit booking & re-enty features & sl hunting protection kuch aisa socha hai maine ki es bot me 3 logic hai 3no ki entry webhook se hoti hai jo mera premium indicator deta hai buy aur sell ka signal se par kai baar hota hai ki market ke observe kiya hai maine entry aane ke baad market sab ka sl lene jati hai phir sl hit karne ke baad usi direction me nikal jati hai. ye maine aapne indicator pe bhi dekha hu aisa hota hai. 
+
+solution :- sl protaction ka solution re-enty ke saath ho sakta hai dekhiye logice kaam karti hai trend set hone pe aagar 1h ka trade bullish/bairish hai aur 15 min ka trend bhi bullish/bearish hai to 5 min ke pe jo bhi buy/sell ke signal pe trade excute karegi ye sab signal webhook se milta hai tradingview se mera premium indicator deta hai. 
+to plan kuch aisa hai ki ex:- maan lete hai ki koi trade excute huaa abhi ke kuch naye feature aur bot ke purane feature ke saath usme current price hoge pairs ke 
+"Trade #1
+Symbol: XAUUSD | BUY
+Strategy: LOGIC1
+Entry: 3758.84
+Sl:- abhi naya update hoga wo 
+tp1,tp2,tp3:- ye mai batata hu aage"
+aisa ko trade excute huaa trend allinement aur entry ke signal se aur new feature ke sl hit huaa par abhi bhi 1h ka trend bullish/beairsh hai aur saath me 15 min ka bhi to bot ko ek database dena hoga taki wo enty aur sl ka price note kar sake aur sl hit huaa to wo note kar sake aur aagar trend alline hai hi rahati hai aur market ka price sl hunt karne ke baar phir se entry price pe pahuchti hai to bot re-entry lega bot sl feature aur lot size ke features ke saath aur tp1, tp2,tp3 ko follow karega (jo mai aage define karuga) par esme ek problem hai ki bot ko sabhi pairs ke live price nahi mil pata to ye hoga kaise. kaya aisa kuch kar sakte hai ki sabhi pairs ke live charts ko interget kar sakte bot ke andar to ye solution kaam karega kyu ki bot ko pata kaise chalega ki abhi kaya price chal raha hai.
+
+ye to thi sl protaction ka solution ka idea aab baat karte hai coustom tp1,tp2,tp3... etc. ki baat hamesa koi bhi trade ka profit booking ka features kuch es tarha hoga ki koi bhi trade ka jitna pips ka sl hai uska aagar utne hi pips ka profit flot ho raha hai to bot ka uska pahala take profit hoga yani tp1 profit book kar kega bot automatic 100% trade exit kar dega aur lekin exit ke price ko note kar lega aur trend allienment check larga usi waqt turant aagar trade allienment abhi bhi bullish/bearish chal raha hai to  jis price pe bot ne tp1 ko exit kiya usi price pe next tp2 ki re-enrty khud le lega same tp1 ke price pe tp1 ne exit li aur turant tp2 ki posistion excute hui trend allinement ko check kar ke sl ka naya feature jo add hone wala hai wahi rahega same follow karega jitna sl utna aagar price profit flot ho to same tp 1 ki tarha trade ka profit book kar lega bot automatic 100% trade exit kar dega par exit ke price ko note kar lega aur trend allienment check karga usi waqt turant aagar trade allienment abhi bhi bullish/bearish chal raha hai to  jis price pe bot ne tp2 ko exit kiya usi price pe next tp3 ki re-enrty khud le lega same tp2 ke price pe tp2 ne exit li aur turant tp3 ki posistion excute hui trend allinement ko check kar ke sl ka naya feature jo add hone wala hai wahi rahega same follow karega jitna sl utna aagar profit flot ho to same tp 2 tarha trade ka profit book kar lega bot automatic 100% trade exit kar dega. phir tp4, tp5, tp6 aise hi chalta rahega process tab tak chalega jab tak bot ko buy/sell ka signal 5 min pe nahi milta ya baki ke entry logice pe bhi same features hoge.
+
+ye feature bot me ban sakta hai ki nahi ye bhi batiye.
+
+_____________________________________________________________________________________________________________
+
+Next
+"4. EXIT STRATEGIES - COMPLETE WORKING
+A. TRAILING STOP LOSS:
+python
+# Default: 50 points trailing
+/add_trailing 123456 50  # TradeID, Points
+
+# WORKING EXAMPLE:
+BUY Trade: EURUSD at 1.0850, SL at 1.0840
+Trailing Start: 50 points (0.0050)
+
+Price moves to 1.0860 → SL becomes 1.0860 - 0.0050 = 1.0810
+Price moves to 1.0870 → SL becomes 1.0870 - 0.0050 = 1.0820
+Price drops to 1.0825 → SL triggered at 1.0820 → Trade closed with profit
+B. TIME-BASED EXIT:
+python
+# Default: 4 hours time exit
+/add_time_exit 123456 2  # TradeID, Hours
+
+# WORKING EXAMPLE:
+Trade opened at: 10:00 AM
+Time Exit set: 2 hours
+Auto Close at: 12:00 PM (irrespective of profit/loss)
+C. INDICATOR-BASED EXIT:
+python
+# Automatic trend reversal detection
+Trade: BUY XAUUSD with LOGIC1 (BULLISH mode)
+
+# If LOGIC1 mode changes to BEARISH/NEUTRAL
+# Bot automatically closes the trade
+# Reason: "INDICATOR_EXIT"
+D. MULTIPLE EXIT STRATEGIES COMBINATION:
+python
+# Ek trade pe multiple exits apply ho sakte hain
+1. Trailing Stop: 50 points
+2. Time Exit: 4 hours  
+3. Indicator Exit: Trend reversal
+
+# Jo pehle trigger hoga, trade close ho jayega
+"
+
+Change:- 4. EXIT STRATEGIES me A. TRAILING STOP LOSS: ko completly chane karna hai esme mujhe naya A. TRAILING STOP LOSS: ka feature hoga jaise hi koi bhi re-entry excute ho tab hi ye features kaam karna chaiye jaise hi re-entry ho cahe wo sl hunting ki re entry ho tp1, tp2, tp3.. more ki entry ho har re-enttry pe jo naya sl ka features maine bataya hai sl ke pip size to 20% chota kar de ye jaise ex:- 1 enrty signal se trade excute huaa us sl jo naya define kiya huaa hai wahi rahega lening jab sl hunt ho ya tp ka re enrty ko to har ek sl hunting aur tp pe 20-20% kaam karte jaaye taki jo profit huaa aagar re-enrty pe sl hit huaa to jo prit huaa hai wo pura chala jayega.
+
+
+4. EXIT STRATEGIES me B. TIME-BASED EXIT: ko completely remove kar dena hai.
+
+4. EXIT STRATEGIES me C. INDICATOR-BASED EXIT: ye aise hi rahega
+
+4. EXIT STRATEGIES me D. MULTIPLE EXIT STRATEGIES COMBINATION: ko hata dena hai par eske kuch features chaiye jaise sl hit huaa ho aur trend allinemt bhi change ho gai ho re-entry nahi hogi aur 3. Indicator Exit: Trend reversal Jo pehle trigger hoga, trade close ho jayega
+_________________________________________________________________________________________________
+
+final instruction:- aapko ye sab abhi excute nhai karna hai phale pure fetures ko samjhiye aur batiye ki kaya samjha aapne aur kaya impove kar sakte hai kaya abhi current bot ke saath ye bina error ke kaam karega aur kaya re-entry features work karega aur aagar nahi karega to solution kaya hai aur karega to kaise kare. sabhi feature ke bare me details me bataiye sirf abhi koi code likhne ki zarurat nahi hai phale khud samjhiye improment aagar zaruri hai to wo bhi batiye aur mujhe samjhaiye phir plan taryar kijiye. Ek aur dikkat hai jaise abhi es bot me base point ka feature hai wo bhi kaam nahi karta hai hai mujhe phale /status pe clik karne pe "📊 Bot Status
+🔸 Trading: ✅ ACTIVE 🔸 Simulation: ❌ OFF 🔸 MT5 Connected: ✅ YES
+Current Modes: LOGIC1: BULLISH LOGIC2: BULLISH LOGIC3: BULLISH
+5 min - bull/bear/ Na 15 min - bull/bear/ Na 1 HR - bull/bear/ Na 1 D- bull/bear/ Na
+' dikhai deta tah par ye naya base point features ko add karne se wo aab ye dikhta hai '📊 Bot Status
+🔸 Trading: ✅ ACTIVE 🔸 Simulation: ❌ OFF 🔸 MT5 Connected: ✅ YES
+Current Modes: LOGIC1: BULLISH LOGIC2: BULLISH LOGIC3: BULLISH
+Use /trend_status for detailed symbol-wise status"
+Aur maine ye feature sirf es liye banaya tha taki mai bot ko ek start point de saktu taki mere premium indicator se aanne wali entry ko excute kar sakte kaya hota hai ki mere indicator se phale entry aati hai phir kuch der baad trend ka signal aata hai aur bais ka signal aata hai to aise hi 14 signal aate hai maine ye bataya hai aur json code bhi diya aap usko dekh sakte hai signal aate hai aise trend/ bais/ bullish enty/baarish entry har ek time frame ke. Mai chahata tha ki mai ek baar stating trend de du phir signal se wo auto update hota rahega har ek time frame pe mujhe ye base start point dena tha mujhe par ye logic ka start point set ho gaya hai jo ki galat hai aagar signal aate hai to pura logic hi netural ho jata hai aur saath saath baki ke logic bhi tum telegram ke massage me dekh sakte ho mai  chahata tha ki har ek time frame ki base start point set ho aur mujhe ek manual cantrol mile taki mai dekh saku ki sabhi pairs pe kon kon se time frame pe kaya trend set kiya hai maine aur aagar mujhe galat laga to mai use badal bhi saku. Par abhi ye feature pre logic ko hi netural kar deta hai see examples:- "ShivamAlgoBot: ✅ MT5 Connection Established
+🤖 Trading Bot Started Successfully!
+Shivam Kumar Gupta: /status
+ShivamAlgoBot: 📊 Bot Status
+🔸 Trading: ✅ ACTIVE 🔸 Simulation: ❌ OFF 🔸 MT5 Connected: ✅ YES
+Current Modes: LOGIC1: BULLISH LOGIC2: BULLISH LOGIC3: BULLISH
+Use /trend_status for detailed symbol-wise status
+Shivam Kumar Gupta: /trend_status
+ShivamAlgoBot: 🎯 Current Trend Status
+XAUUSD: LOGIC1: BULLISH (Base: BULLISH, Mode: AUTO) LOGIC2: BULLISH (Base: BULLISH, Mode: AUTO) LOGIC3: BULLISH (Base: BULLISH, Mode: AUTO) ──────────────────── EURUSD: LOGIC1: BULLISH (Base: BULLISH, Mode: AUTO) LOGIC2: BULLISH (Base: BULLISH, Mode: AUTO) LOGIC3: BULLISH (Base: BULLISH, Mode: AUTO) ──────────────────── GBPUSD: LOGIC1: NEUTRAL (No base trend set) LOGIC2: NEUTRAL (No base trend set) LOGIC3: NEUTRAL (No base trend set) ──────────────────── USDJPY: LOGIC1: NEUTRAL (No base trend set) LOGIC2: NEUTRAL (No base trend set) LOGIC3: NEUTRAL (No base trend set) ──────────────────── USDCAD: LOGIC1: NEUTRAL (No base trend set) LOGIC2: NEUTRAL (No base trend set) LOGIC3: NEUTRAL (No base trend set) ────────────────────
+📊 XAUUSD 15M Trend Updated: BEAR
+🔀 XAUUSD LOGIC1: NEUTRAL → BULLISH
+🔀 XAUUSD LOGIC2: NEUTRAL → BULLISH
+🔀 XAUUSD LOGIC3: NEUTRAL → BULLISH
+🎯 NEW TRADE #1 Strategy: LOGIC1 Symbol: XAUUSD Direction: BUY Entry: 3749.72 SL: 3749.22000 TP1: 3750.22000 Lots: 0.10
+Shivam Kumar Gupta: /status
+ShivamAlgoBot: 📊 Bot Status
+🔸 Trading: ✅ ACTIVE 🔸 Simulation: ❌ OFF 🔸 MT5 Connected: ✅ YES
+Current Modes: LOGIC1: BULLISH LOGIC2: BULLISH LOGIC3: BULLISH
+Use /trend_status for detailed symbol-wise status
+Shivam Kumar Gupta: /trend_status
+ShivamAlgoBot: 🎯 Current Trend Status
+XAUUSD: LOGIC1: BULLISH (Base: BULLISH, Mode: AUTO) LOGIC2: BULLISH (Base: BULLISH, Mode: AUTO) LOGIC3: BULLISH (Base: BULLISH, Mode: AUTO) ──────────────────── EURUSD: LOGIC1: BULLISH (Base: BULLISH, Mode: AUTO) LOGIC2: BULLISH (Base: BULLISH, Mode: AUTO) LOGIC3: BULLISH (Base: BULLISH, Mode: AUTO) ──────────────────── GBPUSD: LOGIC1: NEUTRAL (No base trend set) LOGIC2: NEUTRAL (No base trend set) LOGIC3: NEUTRAL (No base trend set) ──────────────────── USDJPY: LOGIC1: NEUTRAL (No base trend set) LOGIC2: NEUTRAL (No base trend set) LOGIC3: NEUTRAL (No base trend set) ──────────────────── USDCAD: LOGIC1: NEUTRAL (No base trend set) LOGIC2: NEUTRAL (No base trend set) LOGIC3: NEUTRAL (No base trend set) ────────────────────
+Shivam Kumar Gupta: /trend_status
+ShivamAlgoBot: 🎯 Current Trend Status
+XAUUSD: LOGIC1: BULLISH (Base: BULLISH, Mode: AUTO) LOGIC2: BULLISH (Base: BULLISH, Mode: AUTO) LOGIC3: BULLISH (Base: BULLISH, Mode: AUTO) ──────────────────── EURUSD: LOGIC1: BULLISH (Base: BULLISH, Mode: AUTO) LOGIC2: BULLISH (Base: BULLISH, Mode: AUTO) LOGIC3: BULLISH (Base: BULLISH, Mode: AUTO) ──────────────────── GBPUSD: LOGIC1: NEUTRAL (No base trend set) LOGIC2: NEUTRAL (No base trend set) LOGIC3: NEUTRAL (No base trend set) ──────────────────── USDJPY: LOGIC1: NEUTRAL (No base trend set) LOGIC2: NEUTRAL (No base trend set) LOGIC3: NEUTRAL (No base trend set) ──────────────────── USDCAD: LOGIC1: NEUTRAL (No base trend set) LOGIC2: NEUTRAL (No base trend set) LOGIC3: NEUTRAL (No base trend set) ────────────────────
+📊 XAUUSD 15M Trend Updated: BULL
+🎯 NEW TRADE #2 Strategy: LOGIC2 Symbol: XAUUSD Direction: BUY Entry: 3751.66 SL: 3751.16000 TP1: 3752.16000 Lots: 0.10
+🎯 NEW TRADE #3 Strategy: LOGIC1 Symbol: XAUUSD Direction: BUY Entry: 3752.64 SL: 3752.14000 TP1: 3753.14000 Lots: 0.10
+🎯 NEW TRADE #4 Strategy: LOGIC1 Symbol: XAUUSD Direction: BUY Entry: 3751.995 SL: 3751.49500 TP1: 3752.49500 Lots: 0.10
+🎯 NEW TRADE #5 Strategy: LOGIC1 Symbol: XAUUSD Direction: BUY Entry: 3752.25 SL: 3751.75000 TP1: 3752.75000 Lots: 0.10
+📊 XAUUSD 1H Bias Updated: BULL
+📊 XAUUSD 1H Trend Updated: BULL
+📊 XAUUSD 1H Bias Updated: BULL
+Shivam Kumar Gupta: /trend_status
+ShivamAlgoBot: 🎯 Current Trend Status
+XAUUSD: LOGIC1: BULLISH (Base: BULLISH, Mode: AUTO) LOGIC2: BULLISH (Base: BULLISH, Mode: AUTO) LOGIC3: BULLISH (Base: BULLISH, Mode: AUTO) ──────────────────── EURUSD: LOGIC1: BULLISH (Base: BULLISH, Mode: AUTO) LOGIC2: BULLISH (Base: BULLISH, Mode: AUTO) LOGIC3: BULLISH (Base: BULLISH, Mode: AUTO) ──────────────────── GBPUSD: LOGIC1: NEUTRAL (No base trend set) LOGIC2: NEUTRAL (No base trend set) LOGIC3: NEUTRAL (No base trend set) ──────────────────── USDJPY: LOGIC1: NEUTRAL (No base trend set) LOGIC2: NEUTRAL (No base trend set) LOGIC3: NEUTRAL (No base trend set) ──────────────────── USDCAD: LOGIC1: NEUTRAL (No base trend set) LOGIC2: NEUTRAL (No base trend set) LOGIC3: NEUTRAL (No base trend set) ────────────────────
+📊 XAUUSD 1H Bias Updated: BULL
+📊 XAUUSD 15M Trend Updated: BEAR
+Shivam Kumar Gupta: /trend_status
+ShivamAlgoBot: 🎯 Current Trend Status
+XAUUSD: LOGIC1: BULLISH (Base: BULLISH, Mode: AUTO) LOGIC2: BULLISH (Base: BULLISH, Mode: AUTO) LOGIC3: BULLISH (Base: BULLISH, Mode: AUTO) ──────────────────── EURUSD: LOGIC1: BULLISH (Base: BULLISH, Mode: AUTO) LOGIC2: BULLISH (Base: BULLISH, Mode: AUTO) LOGIC3: BULLISH (Base: BULLISH, Mode: AUTO) ──────────────────── GBPUSD: LOGIC1: NEUTRAL (No base trend set) LOGIC2: NEUTRAL (No base trend set) LOGIC3: NEUTRAL (No base trend set) ──────────────────── USDJPY: LOGIC1: NEUTRAL (No base trend set) LOGIC2: NEUTRAL (No base trend set) LOGIC3: NEUTRAL (No base trend set) ──────────────────── USDCAD: LOGIC1: NEUTRAL (No base trend set) LOGIC2: NEUTRAL (No base trend set) LOGIC3: NEUTRAL (No base trend set) ────────────────────
+Shivam Kumar Gupta: /status
+ShivamAlgoBot: 📊 Bot Status
+🔸 Trading: ✅ ACTIVE 🔸 Simulation: ❌ OFF 🔸 MT5 Connected: ✅ YES
+Current Modes: LOGIC1: BULLISH LOGIC2: BULLISH LOGIC3: BULLISH
+Use /trend_status for detailed symbol-wise status" 
+Aur jitne bhi trade yaha aaye ek bhi mt5 pe excute nahi huye.
+Final instruction -2: “Aab mai chata hu ki mere pure requirement ko clear aur deep me samjhe aur ek proper detail plan tayar kare aur bot ke code ke bhi pure code ko line by line analysis kare ki aur kaya error hai. Uske baad mujhe ek ye bot ke code likh ke de taki mera bot 100% working ho 100% error free ho mujhe bot ko local pe test kar ke phir google cloud window vm pe upload karni hai aur mujhe koi error nahi chaiye likhe huye code se. Mera trade lagna chaiye jo bhi naya feature bataya hai uske hisab se jo feature hatane ko bola usko hataiye pura aur jo aad karne bola usko add kijiye full features ke saath aur jo phale se error aa rahe hai usko fix kijiye. Aur bot mere sare pairs ko dhayyne me rakh kar hi sabhi feature aur bot ko devlop karna taki sabhi trade pe sahi sl, lot size, pip size process kar ke mt5 ko bheje aur trade exute ho.”
+

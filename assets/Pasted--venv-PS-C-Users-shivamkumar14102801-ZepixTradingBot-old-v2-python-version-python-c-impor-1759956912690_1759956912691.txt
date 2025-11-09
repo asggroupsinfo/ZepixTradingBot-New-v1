@@ -1,0 +1,193 @@
+(venv) PS C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2> python --version
+>> python -c "import struct; print('64-bit Python' if struct.calcsize('P') * 8 == 64 else '32-bit Python - INCOMPATIBLE WITH MT5')"
+Python 3.10.0
+64-bit Python
+(venv) PS C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2> Test-Path "C:\Program Files\MetaTrader 5\terminal64.exe"
+False
+(venv) PS C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2> Test-Path "C:\Program Files\XM Global MT5\terminal64.exe"
+True
+(venv) PS C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2> # Run PowerShell as Administrator, then:
+>> New-Item -ItemType SymbolicLink -Path "C:\Program Files\MetaTrader 5" -Target "C:\Program Files\XM Global MT5"
+
+
+    Directory: C:\Program Files
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----l         10/8/2025   8:52 PM                MetaTrader 5
+
+
+(venv) PS C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2> python main.py --host 0.0.0.0 --port 80
+Traceback (most recent call last):
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\numpy\_core\__init__.py", line 22, in <module>
+    from . import multiarray
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\numpy\_core\multiarray.py", line 11, in <module>
+    from . import _multiarray_umath, overrides
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\numpy\_core\overrides.py", line 5, in <module>
+    from numpy._core._multiarray_umath import (
+ModuleNotFoundError: No module named 'numpy._core._multiarray_umath'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\numpy\__init__.py", line 125, in <module>
+    from numpy.__config__ import show_config
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\numpy\__config__.py", line 4, in <module>
+    from numpy._core._multiarray_umath import (
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\numpy\_core\__init__.py", line 48, in <module>
+    raise ImportError(msg) from exc
+ImportError:
+
+IMPORTANT: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!
+
+Importing the numpy C-extensions failed. This error can happen for
+many reasons, often due to issues with your setup or how NumPy was
+installed.
+
+We have compiled some common reasons and troubleshooting tips at:
+
+    https://numpy.org/devdocs/user/troubleshooting-importerror.html
+
+Please note and check the following:
+
+  * The Python version is: Python3.10 from "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\Scripts\python.exe"
+  * The NumPy version is: "2.3.3"
+
+and make sure that they are the versions you expect.
+Please carefully study the documentation linked above for further help.
+
+Original error was: No module named 'numpy._core._multiarray_umath'
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\numpy\__init__.py", line 130, in <module>
+    raise ImportError(msg) from e
+ImportError: Error importing numpy: you should not try to import numpy from
+        its source directory; please exit the numpy source tree, and relaunch
+        your python interpreter from there.
+⚠️  MetaTrader5 not available (Windows only). Running in simulation mode.
+🔧 Config loaded - MT5 Login: 308646228, Server: XMGlobal-MT5 6
+==================================================
+ZEPIX TRADING BOT v2.0
+==================================================
+Starting server on 0.0.0.0:80
+Features enabled:
+✓ Fixed lot sizes
+✓ Re-entry system
+✓ SL hunting protection
+✓ 1:1.5 Risk-Reward
+✓ Progressive SL reduction
+==================================================
+←[32mINFO←[0m:     Started server process [←[36m6952←[0m]
+←[32mINFO←[0m:     Waiting for application startup.
+⚠️  Running in simulation mode (MT5 not available on this platform)
+✅ Trend manager set in Telegram bot
+INFO:price_monitor_service:✅ Price Monitor Service started
+✅ Trading engine initialized successfully
+✅ Price monitor service started
+✅ Telegram bot polling started
+Traceback (most recent call last):
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\numpy\_core\__init__.py", line 22, in <module>
+    from . import multiarray
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\numpy\_core\multiarray.py", line 11, in <module>
+    from . import _multiarray_umath, overrides
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\numpy\_core\overrides.py", line 5, in <module>
+    from numpy._core._multiarray_umath import (
+ModuleNotFoundError: No module named 'numpy._core._multiarray_umath'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\numpy\__init__.py", line 125, in <module>
+    from numpy.__config__ import show_config
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\numpy\__config__.py", line 4, in <module>
+    from numpy._core._multiarray_umath import (
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\numpy\_core\__init__.py", line 48, in <module>
+    raise ImportError(msg) from exc
+ImportError:
+
+IMPORTANT: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!
+
+Importing the numpy C-extensions failed. This error can happen for
+many reasons, often due to issues with your setup or how NumPy was
+installed.
+
+We have compiled some common reasons and troubleshooting tips at:
+
+    https://numpy.org/devdocs/user/troubleshooting-importerror.html
+
+Please note and check the following:
+
+  * The Python version is: Python3.10 from "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\Scripts\python.exe"
+  * The NumPy version is: "2.3.3"
+
+and make sure that they are the versions you expect.
+Please carefully study the documentation linked above for further help.
+
+Original error was: No module named 'numpy._core._multiarray_umath'
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\numpy\__init__.py", line 130, in <module>
+    raise ImportError(msg) from e
+ImportError: Error importing numpy: you should not try to import numpy from
+        its source directory; please exit the numpy source tree, and relaunch
+        your python interpreter from there.
+⚠️  Reconciliation error: numpy._core.multiarray failed to import
+←[32mINFO←[0m:     Application startup complete.
+←[32mINFO←[0m:     Uvicorn running on ←[1mhttp://0.0.0.0:80←[0m (Press CTRL+C to quit)
+Traceback (most recent call last):
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\numpy\_core\__init__.py", line 22, in <module>
+    from . import multiarray
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\numpy\_core\multiarray.py", line 11, in <module>
+    from . import _multiarray_umath, overrides
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\numpy\_core\overrides.py", line 5, in <module>
+    from numpy._core._multiarray_umath import (
+ModuleNotFoundError: No module named 'numpy._core._multiarray_umath'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\numpy\__init__.py", line 125, in <module>
+    from numpy.__config__ import show_config
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\numpy\__config__.py", line 4, in <module>
+    from numpy._core._multiarray_umath import (
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\numpy\_core\__init__.py", line 48, in <module>
+    raise ImportError(msg) from exc
+ImportError:
+
+IMPORTANT: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!
+
+Importing the numpy C-extensions failed. This error can happen for
+many reasons, often due to issues with your setup or how NumPy was
+installed.
+
+We have compiled some common reasons and troubleshooting tips at:
+
+    https://numpy.org/devdocs/user/troubleshooting-importerror.html
+
+Please note and check the following:
+
+  * The Python version is: Python3.10 from "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\Scripts\python.exe"
+  * The NumPy version is: "2.3.3"
+
+and make sure that they are the versions you expect.
+Please carefully study the documentation linked above for further help.
+
+Original error was: No module named 'numpy._core._multiarray_umath'
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\numpy\__init__.py", line 130, in <module>
+    raise ImportError(msg) from e
+ImportError: Error importing numpy: you should not try to import numpy from
+        its source directory; please exit the numpy source tree, and relaunch
+        your python interpreter from there.
+⚠️  Reconciliation error: numpy._core.multiarray failed to import

@@ -1,0 +1,411 @@
+Zepix Premium - Signals and Overlays Zero Lag Overlays (Alerts Features)
+Symbols: BTCUSD⬇
+Condition: Zepix Premium - Signals and Overlays Zero Lag Overlays⬇
+Condition ke aandar ke features hain:
+Bullish Entry Signals
+Bearish Entry Signals
+Bullish Exit Appeared
+Bearish Exit Appeared
+Bullish Reversal Signals
+Bearish Reversal Signals
+Breakout Signal
+Breakdown Signal
+[Screener] Full Bearish Alert
+[Screener] Full Bullish Alert
+Aur Trigger ke options hain:
+Crossing
+Crossing Up
+Crossing Down
+Greater Than
+Less Than
+Entering Channel
+Exiting Channel
+Inside Channel
+Outside Channel
+Moving Up
+Moving Down
+Moving Up %
+Moving Down %
+Interval: Same as chart (5 minutes), (15 minutes), (1hr) ⬇
+Trigger: Only Once, Once Per Bar, Once Per Bar Close, Once Per Minute⬇
+Expiration: October 7, 2025 at 17:36⬇
+
+
+
+
+
+
+
+
+
+
+
+
+
+Zepix Premium - Smart Money Toolkit (Alerts Features)
+
+
+Symbols:  BTCUSD ⬇
+Condition: Zepix Premium - Smart Money Toolkit ⬇   
+Plot (Plot ke aandar ke features hain) ⬇
+PlotCandle (Open)
+PlotCandle (High)
+PlotCandle (Low)
+PlotCandle (Close)
+PlotCandle (Open)
+PlotCandle (High)
+PlotCandle (Low)
+PlotCandle (Close)
+✖ Crossing (Crossing ke aandar ke features hain) ⬇
+Crossing
+Crossing
+Crossing Up
+Crossing Down
+Greater Than
+Less Than
+Entering Channel
+Exiting Channel
+Inside Channel
+Outside Channel
+Moving Up
+Moving Down
+Moving Up %
+Moving Down %
+Value: ⬇0.0 (Fillable)⬆
+Interval: Same as chart (5 minutes), (15 minutes), (1hr) ⬇
+Trigger: Only Once, Once Per Bar, Once Per Bar Close, Once Per Minute⬇
+Expiration: October 7, 2025 at 17:36⬇
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Zepix Premium Settings Document
+
+Introduction
+
+This document outlines the settings for the Zepix Premium trading platform, including inputs, time frames, reversal with volumes, breakout settings, trend strength screener, and bar settings.
+
+Inputs Tab Settings
+
+- Indicator Preset: Zero Lag
+- Zero Lag Preset Settings:
+    - Signals Sensitivity: 50
+    - Band Multiplier: 1
+    - Exit Length (Bars): 15
+- Options Checked:
+    - Exit Signals
+    - Trend Catcher
+    - Timeframe Table
+- Timeframes:
+    - Time frame 1: 5 minutes
+    - Time frame 2: 15 minutes
+    - Time frame 3: 1 hour
+
+Time Frame Settings
+
+- Time frame: 5
+- Time frame unit: 1 day
+
+Reversal with Volumes Settings
+
+- Volume Data Table: Enabled
+- Trend Shadow: Enabled
+- Trend Length: 1
+- Trend Momentum: 10
+- Distance factor for upper/lower bands: 1
+- Data Source: Close
+
+Breakout Settings
+
+- Breakout Period: 5
+- Max Breakout Length: 200
+
+Trend Strength Screener Settings
+
+- Minimum Number of Tests: 2
+- Trend Strength Screener: Disabled
+- Screener Position: Bottom
+- Indicators Selected:
+    - MACD
+    - STOCHASTIC RSI
+    - VORTEX
+    - MOMENTUM
+    - RSI
+    - PSAR
+    - DMI
+    - MONEY FLOW INDEX
+    - FISHER
+
+Bar Settings
+
+- Bar Colours: Enabled
+- Bullish Bar Color: Green
+- Bearish Bar Color: Red
+- Reverse Trend Bar Color: Orange
+
+Customize Theme Colors
+
+- Bullish Color: Blue
+- Bearish Color: Red
+
+Input Values
+
+- Inputs in status line: Enabled
+
+Options
+
+- Defaults: Dropdown option
+- Buttons: Cancel, Ok
+
+This document provides a comprehensive overview of the Zepix Premium settings, including inputs, time frames, reversal with volumes, breakout settings, trend strength screener, and bar settings. These settings can be used to customize the trading platform to suit individual needs and preferences.
+
+
+
+
+Zepix Premium Settings
+
+Style Settings
+
+The following settings are configured under the Visibility tab for signals and overlays in Zepix Premium:
+
+- Bearish Entry Signals: Enabled, position set to Absolute
+- Bullish Entry Signals: Enabled, position set to Absolute
+- Bearish Exit Signal: Enabled, position set to Below bar
+- Bullish Exit Signal: Enabled, position set to Above bar
+- Bar Color: Enabled
+- Volume Trendline: Enabled
+- Bullish Reversal Signals: Enabled, position set to Absolute
+- Bearish Reversal Signals: Enabled, position set to Absolute
+
+Graphic Objects
+
+The following graphic objects are enabled:
+
+- Pane labels
+- Lines
+- Tables
+
+Output Values
+
+- Precision: Default
+
+Options
+
+- Labels on price scale: Enabled
+- Values in status line: Enabled
+
+Buttons
+
+- Defaults: Dropdown option
+- Cancel: Cancel changes
+- Ok: Confirm settings
+
+Setting Explanation
+
+The settings shown pertain to output values with a focus on precision set to default. Two options are enabled:
+
+1. Labels on price scale: Indicates that labels are displayed on the price scale.
+2. Values in status line: Indicates that values are shown in the status line.
+
+These settings can be used to customize the trading platform to suit individual needs and preferences.
+
+
+Zepix Premium - Signals and Overlays Settings
+Visibility Settings
+The following time frame settings are configured under the Visibility tab for signals and overlays in Zepix Premium:
+
+- Ticks: Enabled
+- Seconds: Enabled, range from 1 to 59
+- Minutes: Enabled, range from 1 to 59
+- Hours: Enabled, range from 1 to 24
+- Days: Enabled, range from 1 to 366
+- Weeks: Enabled, range from 1 to 52
+- Months: Enabled, range from 1 to 12
+- Ranges: Enabled
+
+Setting Explanation
+These settings allow users to configure the visibility of signals and overlays in Zepix Premium across various time frames (Ticks, Seconds, Minutes, Hours, Days, Weeks, Months) and ranges. All time frames are enabled with adjustable ranges as specified.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Zepix Premium - Smart Money Toolkit Settings
+
+Inputs Tab Settings
+
+Market Structure
+-     - Window: 5000
+-     - Swing: 100
+-     - Mapping Structure: Disabled
+-     - Color Candles: Disabled (set to Tiny)
+
+Algorithmic Logic
+-     - Adjusted: 5
+-     - Options Checked:
+        - Build Sweep (x)
+        - Bubbles
+-     - Strong/Weak HL: Disabled
+
+Volumetric Order Blocks
+-     - Show Last: 5 (Enabled)
+-     - Show Buy/Sell Activity: Enabled
+
+
+Setting Explanation
+
+These settings are for the Zepix Premium - Smart Money Toolkit. They configure market structure parameters like window and swing sizes, enable features like Build Sweep and Bubbles under Algorithmic Logic, and show volumetric order blocks with buy/sell activity. These settings can be used to customize the trading platform to suit individual needs and preferences.
+
+
+
+Settings Extracted from the Image
+
+General Settings
+- Show Breakers: Disabled
+- Construction: Length
+    - Length: 5
+- Mitigation Method: Close
+- Metric Size: Normal
+- Show Metrics: Enabled
+- Show Mid-Line: Enabled
+- Hide Overlap: Enabled
+    - Overlap Setting: Recent
+
+Fair Value Gap (FVG) Settings
+- FVG: Enabled
+- Show Last: 5
+- Mitigation: Close
+- Threshold: 0
+
+Setting Explanation
+These settings configure the display of breakers, construction, and fair value gaps. The general settings control the display of metrics, mid-lines, and overlap, while the FVG settings determine the display of fair value gaps. These settings can be used to customize the trading platform to suit individual needs and preferences.
+Swing Failure Pattern Settings
+
+Overlay Options
+- Hide Overlay: Enabled
+- Show Mid-Line: Enabled
+- Extend FVG: Disabled
+- Display Raids: Disabled
+
+Swing Failure Pattern
+- Show Last: 5
+- Deviation Area: Disabled
+- Length: 5 (Enabled)
+
+Additional Settings
+- Filtering: None
+- Threshold: 1
+- Text Size: Small
+- Show Level: Enabled
+- Fill Area: Enabled
+
+Setting Explanation
+These settings configure the Swing Failure Pattern feature. The overlay options allow users to customize the display of the pattern, while the Swing Failure Pattern settings control the number of patterns shown and the length of the pattern. The additional settings provide further customization options for filtering, threshold, text size, and display of levels and fill areas. These settings can be used to tailor the Swing Failure Pattern feature to suit individual trading needs and preferences.
+
+Settings Extracted from the Image
+
+Liquidity Concepts
+- Equal H&L: Short-Term
+- Liquidity Prints: Enabled
+- Buyside & Sellside: Disabled
+    - Type: Area
+- Sweep Area: Disabled
+    - Value: 10
+
+Input Values
+- Inputs in status line: Enabled
+
+Setting Explanation
+These settings configure liquidity concepts, including equal highs and lows, liquidity prints, and sweep areas. The settings enable users to customize the display of liquidity-related information and inputs in the status line. These settings can be used to tailor the trading platform to suit individual needs and preferences.
+
+Zepix Premium - Smart Money Toolkit Settings (Style Tab)
+
+Plot Settings
+- Plot: Enabled
+- Bar Color: Enabled
+- PlotCandle: Enabled
+
+Graphic Objects
+- Boxes: Enabled
+- Pane Labels: Enabled
+- Line Fills: Enabled
+- Lines: Enabled
+- Polylines: Enabled
+
+Output Values
+- Precision: Default
+- Labels on Price Scale: Enabled
+- Values in Status Line: Enabled
+
+Setting Explanation
+These settings are from the "Style" tab of the Zepix Premium - Smart Money Toolkit. They configure the display of plots, graphic objects, and output values. The settings enable various visual elements like plots, bars, candles, boxes, labels, lines, and polylines. Output values are set to display labels on the price scale and values in the status line with default precision.
+
+These settings allow users to customize the visual representation of data in the toolkit, enhancing the clarity and usability of the plots and related graphical elements. By enabling specific features like bar colors, line fills, and pane labels, users can tailor the display to meet their analytical needs and preferences. The precision and output options further ensure that the information is presented accurately and in a manner that is easy to interpret.
+
+Zepix Premium - Smart Money Toolkit Settings: Visibility Tab
+
+Settings Overview
+The Visibility tab in Zepix Premium - Smart Money Toolkit provides options for customizing the display of time units. The following settings are available:
+
+- Ticks: Enabled
+- Seconds: Range from 1 to 59
+- Minutes: Range from 1 to 59
+- Hours: Range from 1 to 24
+- Days: Range from 1 to 366
+- Weeks: Range from 1 to 52
+- Months: Range from 1 to 12
+- Ranges: Enabled
+
+Controls
+The settings menu includes the following controls:
+
+- Defaults: Resets settings to their default values
+- Cancel: Discards changes made to the settings
+- Ok: Confirms and saves the settings
+
+Setting Explanation
+The Visibility tab settings allow users to customize the display of time units in the Zepix Premium - Smart Money Toolkit. By enabling or disabling specific time units, users can tailor the display to suit their analytical needs and preferences. The ranges provided for each time unit offer flexibility in setting specific parameters. The controls at the bottom of the menu enable users to easily manage their settings and revert to default values if needed.

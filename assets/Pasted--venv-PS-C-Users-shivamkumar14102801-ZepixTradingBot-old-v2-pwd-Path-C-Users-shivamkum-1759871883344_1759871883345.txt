@@ -1,0 +1,65 @@
+(venv) PS C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2> pwd
+
+Path
+----
+C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2
+
+
+(venv) PS C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2> notepad .env
+(venv) PS C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2> # Check karo file ban gayi:
+>> dir .env
+>>
+>> # Content check karo:
+>> type .env
+
+
+    Directory: C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         10/7/2025   9:16 PM            168 .env
+TELEGRAM_TOKEN=8289959450:AAHKZ_SJWjVzbRZXLAxaJ6SLfcWtXG1kBnA
+TELEGRAM_CHAT_ID=2139792302
+MT5_LOGIN=308646228
+MT5_PASSWORD=Fast@@2801@@!!!
+MT5_SERVER=XMGlobal-MT5 6
+
+
+(venv) PS C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2> # MT5 terminal running hai confirm karo (minimized)
+>> # Phir bot start karo:
+>> python main.py --host 0.0.0.0 --port 80
+==================================================
+ZEPIX TRADING BOT v2.0
+==================================================
+Starting server on 0.0.0.0:80
+Features enabled:
+✓ Fixed lot sizes
+✓ Re-entry system
+✓ SL hunting protection
+✓ 1:1.5 Risk-Reward
+✓ Progressive SL reduction
+==================================================
+←[32mINFO←[0m:     Started server process [←[36m2784←[0m]
+←[32mINFO←[0m:     Waiting for application startup.
+MT5 login failed, retry 1/3
+MT5 login failed, retry 2/3
+MT5 login failed, retry 3/3
+❌ Failed to connect to MT5 after retries
+❌ CRITICAL: Live trading mode enabled but MT5 connection failed!
+✋ Bot startup aborted to prevent trading errors.
+🔧 Please verify:
+  1. MetaTrader 5 is installed and running
+  2. MT5 credentials are correct in environment variables
+  3. MT5 server is accessible
+←[31mERROR←[0m:    Traceback (most recent call last):
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\venv\lib\site-packages\starlette\routing.py", line 677, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "C:\Program Files\Python310\lib\contextlib.py", line 199, in __aenter__
+    return await anext(self.gen)
+  File "C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2\main.py", line 50, in lifespan
+    raise RuntimeError("MT5 connection required for live trading mode")
+RuntimeError: MT5 connection required for live trading mode
+
+←[31mERROR←[0m:    Application startup failed. Exiting.
+(venv) PS C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2>

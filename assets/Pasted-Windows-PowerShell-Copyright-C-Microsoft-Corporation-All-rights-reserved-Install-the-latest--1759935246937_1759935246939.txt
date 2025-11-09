@@ -1,0 +1,1217 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Windows\system32> cd C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2
+>> .\venv\Scripts\Activate.ps1
+>>
+>> # Check Python version
+>> python --version
+>>
+>> # Uninstall MT5
+>> python -m pip uninstall MetaTrader5 -y
+>>
+>> # Reinstall with specific wheel
+>> python -m pip install MetaTrader5 --no-cache-dir --force-reinstall
+>>
+>> # Test import
+>> python -c "import MetaTrader5 as mt5; print('MT5 Version:', mt5.__version__); print('MT5 Core:', mt5._core)"
+Python 3.10.0
+Found existing installation: MetaTrader5 5.0.5200
+Uninstalling MetaTrader5-5.0.5200:
+  Successfully uninstalled MetaTrader5-5.0.5200
+Collecting MetaTrader5
+  Downloading MetaTrader5-5.0.5328-cp310-cp310-win_amd64.whl.metadata (2.4 kB)
+Collecting numpy>=1.7 (from MetaTrader5)
+  Downloading numpy-2.2.6-cp310-cp310-win_amd64.whl.metadata (60 kB)
+Downloading MetaTrader5-5.0.5328-cp310-cp310-win_amd64.whl (50 kB)
+Downloading numpy-2.2.6-cp310-cp310-win_amd64.whl (12.9 MB)
+   ---------------------------------------- 12.9/12.9 MB 101.1 MB/s  0:00:00
+Installing collected packages: numpy, MetaTrader5
+  Attempting uninstall: numpy
+    Found existing installation: numpy 2.3.3
+    Uninstalling numpy-2.3.3:
+      Successfully uninstalled numpy-2.3.3
+Successfully installed MetaTrader5-5.0.5328 numpy-2.2.6
+MT5 Version: 5.0.5328
+MT5 Core: <module 'MetaTrader5._core' from 'C:\\Users\\shivamkumar14102801\\ZepixTradingBot-old-v2\\venv\\lib\\site-packages\\MetaTrader5\\_core.cp310-win_amd64.pyd'>
+(venv) PS C:\Users\shivamkumar14102801\ZepixTradingBot-old-v2> python main.py --host 0.0.0.0 --port 80
+🔧 Config loaded - MT5 Login: 308646228, Server: XMGlobal-MT5 6
+==================================================
+ZEPIX TRADING BOT v2.0
+==================================================
+Starting server on 0.0.0.0:80
+Features enabled:
+✓ Fixed lot sizes
+✓ Re-entry system
+✓ SL hunting protection
+✓ 1:1.5 Risk-Reward
+✓ Progressive SL reduction
+==================================================
+←[32mINFO←[0m:     Started server process [←[36m4448←[0m]
+←[32mINFO←[0m:     Waiting for application startup.
+✅ MT5 connection established
+Account Balance: $10226.50
+✅ Trend manager set in Telegram bot
+✅ Trading engine initialized successfully
+✅ Telegram bot polling started
+←[32mINFO←[0m:     Application startup complete.
+←[32mINFO←[0m:     Uvicorn running on ←[1mhttp://0.0.0.0:80←[0m (Press CTRL+C to quit)
+✅ Mode set to AUTO for XAUUSD 5m
+✅ Mode set to AUTO for XAUUSD 1h
+✅ Mode set to AUTO for XAUUSD 1d
+✅ Trend updated: XAUUSD 1d → BULLISH (MANUAL)
+✅ Mode set to AUTO for XAUUSD 1d
+←[32mINFO←[0m:     135.237.126.203:44980 - "←[1mGET /actuator/health HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[33mWARNING←[0m:  Invalid HTTP request received.
+←[32mINFO←[0m:     195.178.110.15:48964 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[33mWARNING←[0m:  Invalid HTTP request received.
+←[32mINFO←[0m:     195.178.110.15:48978 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+📨 Webhook received: {
+  "type": "entry",
+  "symbol": "XAUUSD",
+  "signal": "sell",
+  "tf": "5m",
+  "price": 4027.405,
+  "strategy": "ZepixPremium"
+}
+📨 Received alert: {'type': 'entry', 'symbol': 'XAUUSD', 'signal': 'sell', 'tf': '5m', 'price': 4027.405, 'strategy': 'ZepixPremium'}
+✅ Alert validation successful
+❌ Signal BEARISH doesn't match trend BULLISH
+←[32mINFO←[0m:     34.212.75.30:21448 - "←[1mPOST /webhook HTTP/1.1←[0m" ←[32m200 OK←[0m
+←[32mINFO←[0m:     147.185.132.22:61146 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     216.180.246.188:21390 - "←[1mGET / HTTP/1.0←[0m" ←[31m404 Not Found←[0m
+←[33mWARNING←[0m:  Invalid HTTP request received.
+←[32mINFO←[0m:     216.180.246.188:45516 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     204.76.203.219:47366 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[33mWARNING←[0m:  Invalid HTTP request received.
+←[32mINFO←[0m:     93.123.109.214:53852 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[33mWARNING←[0m:  Invalid HTTP request received.
+←[32mINFO←[0m:     93.123.109.214:53864 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     216.180.246.188:51198 - "←[1mGET /manage/account/login HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     216.180.246.188:35480 - "←[1mGET /admin/index.html HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     216.180.246.188:44336 - "←[1mGET /index.html HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     216.180.246.188:45588 - "←[1mGET /%2BCSCOE%2B/logon.html HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     216.180.246.188:39306 - "←[1mGET /cgi-bin/login.cgi HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     216.180.246.188:54026 - "←[1mGET /login.htm HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     216.180.246.188:42582 - "←[1mGET /login.html HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     216.180.246.188:53902 - "←[1mGET /login.jsp HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     216.180.246.188:58902 - "←[1mGET /login HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     216.180.246.188:50100 - "←[1mGET /doc/index.html HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     216.180.246.188:37548 - "←[1mGET /remote/login HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     216.180.246.188:54338 - "←[1mGET //admin/login.asp HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     172.236.228.222:9650 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     216.180.246.188:60860 - "←[1mGET /web/ HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     216.180.246.188:44578 - "←[1mGET //webpages/login.html HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     204.76.203.212:45076 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[33mWARNING←[0m:  Invalid HTTP request received.
+←[32mINFO←[0m:     196.251.87.141:56725 - "←[1mGET /.env HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[33mWARNING←[0m:  Invalid HTTP request received.
+←[32mINFO←[0m:     93.123.109.214:49156 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[33mWARNING←[0m:  Invalid HTTP request received.
+←[32mINFO←[0m:     93.123.109.214:49170 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     213.209.157.162:43164 - "←[1mGET /.git/index HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     204.76.203.219:44044 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[33mWARNING←[0m:  Invalid HTTP request received.
+←[32mINFO←[0m:     195.178.110.15:56712 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[33mWARNING←[0m:  Invalid HTTP request received.
+←[32mINFO←[0m:     195.178.110.15:56720 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mPOST /cgi-bin/../../../../../../../../../../bin/sh HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mPOST /cgi-bin/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/bin/sh HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mPOST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mPOST /?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /vendor/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /vendor/phpunit/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /phpunit/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /lib/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /lib/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /lib/phpunit/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /admin/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /public/index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /index.php?lang=../../../../../../../../usr/local/lib/php/pearcmd&+config-create+/&/<?echo(md5("hi"));?>+/tmp/index1.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /index.php?lang=../../../../../../../../tmp/index1 HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     129.212.179.2:51564 - "←[1mGET /containers/json HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+📨 Webhook received: {
+  "type": "entry",
+  "symbol": "XAUUSD",
+  "signal": "buy",
+  "tf": "5m",
+  "price": 4046.495,
+  "strategy": "ZepixPremium"
+}
+📨 Received alert: {'type': 'entry', 'symbol': 'XAUUSD', 'signal': 'buy', 'tf': '5m', 'price': 4046.495, 'strategy': 'ZepixPremium'}
+✅ Alert validation successful
+📊 SL/TP Calculation:
+   Symbol: XAUUSD | Lot: 0.10
+   Entry: 4046.49500
+   SL: 4036.49500 (1000.0 pips)
+   TP: 4061.49500 (1500.0 pips)
+   Risk: $10000 tier | Volatility: HIGH
+🔄 Symbol mapping: XAUUSD → GOLD
+✅ Order placed successfully: Ticket #451361607
+←[32mINFO←[0m:     34.212.75.30:43430 - "←[1mPOST /webhook HTTP/1.1←[0m" ←[32m200 OK←[0m
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+←[32mINFO←[0m:     204.76.203.212:36510 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+←[32mINFO←[0m:     176.97.210.9:55232 - "←[1mCONNECT postman-echo.com%3A443 HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+←[32mINFO←[0m:     204.76.203.219:45394 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Auto-reconciliation: Position 451361607 already closed in MT5
+✅ Position 451361607 already closed (not found in MT5)
+💰 Trade Closed: XAUUSD BUY
+   Entry: 4046.49500 → Close: 4036.98500
+   Pips: -951.0 | PnL: $-95.10
+   Reason: MT5_AUTO_CLOSED
+📨 Webhook received: {
+  "type": "entry",
+  "symbol": "XAUUSD",
+  "signal": "sell",
+  "tf": "5m",
+  "price": 4036.06,
+  "strategy": "ZepixPremium"
+}
+📨 Received alert: {'type': 'entry', 'symbol': 'XAUUSD', 'signal': 'sell', 'tf': '5m', 'price': 4036.06, 'strategy': 'ZepixPremium'}
+✅ Alert validation successful
+❌ Signal BEARISH doesn't match trend BULLISH
+←[32mINFO←[0m:     34.212.75.30:42780 - "←[1mPOST /webhook HTTP/1.1←[0m" ←[32m200 OK←[0m
+←[32mINFO←[0m:     162.216.150.109:62412 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+📨 Webhook received: {
+  "type": "entry",
+  "symbol": "XAUUSD",
+  "signal": "sell",
+  "tf": "15m",
+  "price": 4037.16,
+  "strategy": "ZepixPremium"
+}
+📨 Received alert: {'type': 'entry', 'symbol': 'XAUUSD', 'signal': 'sell', 'tf': '15m', 'price': 4037.16, 'strategy': 'ZepixPremium'}
+✅ Alert validation successful
+❌ Signal BEARISH doesn't match trend BULLISH
+←[32mINFO←[0m:     52.32.178.7:44398 - "←[1mPOST /webhook HTTP/1.1←[0m" ←[32m200 OK←[0m
+←[32mINFO←[0m:     45.142.154.123:33082 - "←[1mGET /version HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     45.142.154.123:33194 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     45.142.154.123:33320 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     45.142.154.123:33448 - "←[1mGET /v1 HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     45.142.154.123:33670 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     45.142.154.123:34104 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     45.142.154.123:34198 - "←[1mGET /favicon.ico HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mPOST /cgi-bin/../../../../../../../../../../bin/sh HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mPOST /cgi-bin/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/bin/sh HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mPOST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mPOST /?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /vendor/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /vendor/phpunit/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /phpunit/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /lib/phpunit/phpunit/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /lib/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /lib/phpunit/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /admin/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /public/index.php?s=/index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /index.php?lang=../../../../../../../../usr/local/lib/php/pearcmd&+config-create+/&/<?echo(md5("hi"));?>+/tmp/index1.php HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /index.php?lang=../../../../../../../../tmp/index1 HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     159.65.31.54:57562 - "←[1mGET /containers/json HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     209.38.37.132:59630 - "←[1mGET /.env HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     209.38.37.132:59636 - "←[1mGET /.git/config HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+📨 Webhook received: {
+  "type": "entry",
+  "symbol": "XAUUSD",
+  "signal": "buy",
+  "tf": "5m",
+  "price": 4042.415,
+  "strategy": "ZepixPremium"
+}
+📨 Received alert: {'type': 'entry', 'symbol': 'XAUUSD', 'signal': 'buy', 'tf': '5m', 'price': 4042.415, 'strategy': 'ZepixPremium'}
+✅ Alert validation successful
+📊 SL/TP Calculation:
+   Symbol: XAUUSD | Lot: 0.10
+   Entry: 4042.41500
+   SL: 4032.41500 (1000.0 pips)
+   TP: 4057.41500 (1500.0 pips)
+   Risk: $10000 tier | Volatility: HIGH
+🔄 Symbol mapping: XAUUSD → GOLD
+✅ Order placed successfully: Ticket #451428077
+←[32mINFO←[0m:     34.212.75.30:36350 - "←[1mPOST /webhook HTTP/1.1←[0m" ←[32m200 OK←[0m
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+←[32mINFO←[0m:     204.76.203.219:44754 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+←[32mINFO←[0m:     185.247.137.70:53697 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Symbol mapping: XAUUSD → GOLD
+🔄 Auto-reconciliation: Position 451428077 already closed in MT5
+✅ Position 451428077 already closed (not found in MT5)
+💰 Trade Closed: XAUUSD BUY
+   Entry: 4042.41500 → Close: 4032.49500
+   Pips: -992.0 | PnL: $-99.20
+   Reason: MT5_AUTO_CLOSED
+📨 Webhook received: {
+  "type": "entry",
+  "symbol": "XAUUSD",
+  "signal": "sell",
+  "tf": "5m",
+  "price": 4031.945,
+  "strategy": "ZepixPremium"
+}
+📨 Received alert: {'type': 'entry', 'symbol': 'XAUUSD', 'signal': 'sell', 'tf': '5m', 'price': 4031.945, 'strategy': 'ZepixPremium'}
+✅ Alert validation successful
+❌ Signal BEARISH doesn't match trend BULLISH
+←[32mINFO←[0m:     52.32.178.7:37544 - "←[1mPOST /webhook HTTP/1.1←[0m" ←[32m200 OK←[0m
+📨 Webhook received: {
+  "type": "trend",
+  "symbol": "XAUUSD",
+  "signal": "bear",
+  "tf": "15m",
+  "price": 4040.25,
+  "strategy": "ZepixPremium"
+}
+📨 Received alert: {'type': 'trend', 'symbol': 'XAUUSD', 'signal': 'bear', 'tf': '15m', 'price': 4040.25, 'strategy': 'ZepixPremium'}
+✅ Alert validation successful
+✅ Trend updated: XAUUSD 15m → BEARISH (AUTO)
+←[32mINFO←[0m:     34.212.75.30:37194 - "←[1mPOST /webhook HTTP/1.1←[0m" ←[32m200 OK←[0m
+📨 Webhook received: {
+  "type": "entry",
+  "symbol": "XAUUSD",
+  "signal": "buy",
+  "tf": "5m",
+  "price": 4043.47,
+  "strategy": "ZepixPremium"
+}
+📨 Received alert: {'type': 'entry', 'symbol': 'XAUUSD', 'signal': 'buy', 'tf': '5m', 'price': 4043.47, 'strategy': 'ZepixPremium'}
+✅ Alert validation successful
+❌ Trend not aligned for LOGIC1: {'1h': 'BULLISH', '15m': 'BEARISH'}
+←[32mINFO←[0m:     52.32.178.7:58360 - "←[1mPOST /webhook HTTP/1.1←[0m" ←[32m200 OK←[0m
+←[33mWARNING←[0m:  Invalid HTTP request received.
+←[32mINFO←[0m:     204.76.203.212:49498 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+📨 Webhook received: {
+  "type": "entry",
+  "symbol": "XAUUSD",
+  "signal": "sell",
+  "tf": "5m",
+  "price": 4031.425,
+  "strategy": "ZepixPremium"
+}
+📨 Received alert: {'type': 'entry', 'symbol': 'XAUUSD', 'signal': 'sell', 'tf': '5m', 'price': 4031.425, 'strategy': 'ZepixPremium'}
+✅ Alert validation successful
+❌ Trend not aligned for LOGIC1: {'1h': 'BULLISH', '15m': 'BEARISH'}
+←[32mINFO←[0m:     52.32.178.7:51792 - "←[1mPOST /webhook HTTP/1.1←[0m" ←[32m200 OK←[0m
+←[33mWARNING←[0m:  Invalid HTTP request received.
+←[32mINFO←[0m:     20.127.155.221:56072 - "←[1mGET /portal/redlion HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     35.233.76.131:46062 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     204.76.203.219:42154 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     143.244.181.47:62963 - "←[1mGET /admin/config.php HTTP/1.0←[0m" ←[31m404 Not Found←[0m
+📨 Webhook received: {
+  "type": "entry",
+  "symbol": "XAUUSD",
+  "signal": "buy",
+  "tf": "5m",
+  "price": 4044.7,
+  "strategy": "ZepixPremium"
+}
+📨 Received alert: {'type': 'entry', 'symbol': 'XAUUSD', 'signal': 'buy', 'tf': '5m', 'price': 4044.7, 'strategy': 'ZepixPremium'}
+✅ Alert validation successful
+❌ Trend not aligned for LOGIC1: {'1h': 'BULLISH', '15m': 'BEARISH'}
+←[32mINFO←[0m:     34.212.75.30:33508 - "←[1mPOST /webhook HTTP/1.1←[0m" ←[32m200 OK←[0m
+←[33mWARNING←[0m:  Invalid HTTP request received.
+←[32mINFO←[0m:     195.178.110.15:57374 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[33mWARNING←[0m:  Invalid HTTP request received.
+←[32mINFO←[0m:     195.178.110.15:57380 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m

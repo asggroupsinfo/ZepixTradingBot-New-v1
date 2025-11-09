@@ -1,0 +1,74 @@
+"🎯 NEXT STEPS - Implementation Plan:
+Mujhe 3 NEW FEATURES add karne padenge:
+
+1. Independent Price Monitor (Background Task)
+Har 30 seconds price check kare
+SL hunt ke baad entry level track kare
+Webhook ke bina auto re-entry
+2. Reversal Exit Handler
+TradingView se reversal alert accept kare
+Opposite signal pe immediate exit
+Profit book karne before SL
+3. TP Re-Entry Logic
+TP hit detection
+Pullback waiting mechanism
+Same trend continuation entry"
+
+
+sirf yahi nahi karna hai aur details me mai expain karta hu 
+
+1. Independent Price Monitor (Background Task)
+Har 30 seconds price check kare
+SL hunt ke baad entry level track kare
+Webhook ke bina auto re-entry
+Aur profit book karne ke baad bhi net tp re-enry ke liye (aisa bahut baar hota hai ki bullish/bearish reversal signal ke baad bhi market usi direction me rahati hai tode der ke baad to jaise hi 1st tp hit ya reversal signal se profit book ho uske baad bhi price monitering zaruri hai same direction me re-entry le sake bot webhook signal ke bina)
+2. Reversal Exit Handler
+TradingView se reversal alert accept kare
+Opposite signal pe immediate exit
+Profit book karne before SL
+
+sirf reversal exit alert pe hi nahi trend reversal alert signal aur opposite side buy/sell ka signal pe bhi exit kare aur profit book kare.
+
+3. TP Re-Entry Logic
+TP hit detection
+Pullback waiting mechanism
+Same trend continuation entry
+ 
+TP ka system kuch aisa chaiye ki hona chaiye ki 1:1.5 ka target le kar chale bot phale aagar archive ho gaya to profit book kar le aur phir trend alignment ko check kare logic ka trend align hai to new entry le 50% reduces SL ke saath lekin SL reduces hoga target nahi target 1:1.5 hi fix rahega aise tab tak chale jab tak trend reversal ka signal trading view webhook se nahi aata hai. ya opposite buy/sell signal trading view webook se aane tak continues aise hi tp1, tp2, tp3.. etc. jitna tp ka new entry leta jayega webhook ke bina price monitor karte huye har 30 sec me. Aur har ek tp book karne ke baad 5 min ka time pause lega aur logic alignment ko check Karega tab next tp ka entry create Karega aur order execute Karega.  aise hi aage chalta jaye jab tak exit reversal ka signal ya opposite side buy/sell signal webhook se bot ko nahi milta hai tab tak. 
+
+ye tp system chalta rahega lekin koi bhi exit reversal ka signal aaye usi waqt profit book kar lega tp ke target 1:1.5 ka wait nahi Karega exit reversal signal ke baad continuously har 30 sec pe price check Karega aur jis price pe exit reversal ka profit book kiya tha bot ne aagar us price ke upar nikalta ex:- 3640.200 exit reversal signal aaya profit book ho gaya aab next re-entry 3642.200 pe hogi itna price me gap hona chaiye kisi bhi symbol ke upar) market phir se usi direction me hai aur bot logic ka alignment same direction me hai  to next entry lega aur phir tp system continue karga jab tak trend reversal ka signal na aaye trend reversal ka signal aate hi profit book kar lega tp ke target ka wait nahi Karega. trend reversal signal ke baad continuously har 30 sec pe price check Karega aur jis price pe trend reversal ka profit book kiya tha bot ne aagar us price ke upar nikalta ex:- (3640.200 exit reversal signal aaya profit book ho gaya aab next re-entry 3642.200 pe hogi itna price me gap hona chaiye sabhi bhi symbol ke upar) market phir se usi direction me hai aur bot logic ka alignment same direction me hai  to next entry lega aur phir tp system continue karga jab tak opposite side buy/sell signal na aaye. 
+
+note:- alignment ya opposite side signal aate hi re-entry system close ho jayegi jab tak phir se logic ka alignment align nahi hoti
+
+ye feature sabhi symbol ke upar work karna chaiye sabhi logic ke upar work karna chaiye.
+
+4. Sl hit Re-Entry Logic
+ Sl hunt ke baad Har 30 seconds price check kare aagar SL Jis price pe laga hai maan lete hai example ke liye 3452 es price pe tha aur SL Hunt huaa to Sl Hunt re-entry 3453 tak pachti hai tab re-enry hog Sl hunt ki re-entry. SL hunt ke baad entry level track kare core logic ke alignment ko check kare aagar alignment align hai tab hi Webhook ke bina auto re-entry le uske baad tp re-entry system ko follow karta rahe.
+
+
+5. Telegram ke signal enry ka massage aur tp-renty ka massage aur sl hunt re-enty ka massage mujhe telegram pe dikhna chaiye jo aisa entry ka massage aata hai “🎯 NEW TRADE #1
+Strategy: LOGIC1
+Symbol: XAUUSD
+Direction: BUY
+Entry: 4046.49500
+SL: 4036.49500
+TP: 4061.49500
+Lots: 0.10
+Risk: 1:1.5 RR” esme
+
+
+6. Ek naya feature losses jo save hota hai bot me usko clear karna “⚠️ Risk Management
+
+🔸 Risk Tier: $5000
+🔸 Daily Loss Limit: $200
+🔸 Max Total Loss: $500
+
+📊 Daily Loss: $294.10/200
+🔻 Lifetime Loss: $519.10/500
+
+📦 Current Lot Size: 0.05” jaise mujhe “/stats” pe command dene pe lifetime losses dikha jaise abhi hai 519.10 $ esko clear kar saku telegram se hi bot ke code me jaye bina “/clear loss data” es traha ke command se.
+
+7. Telegram commad se sl hunting re-entry system aur tp system ko pause/starts/ status/ repot dekh saku sl hunting re-entry se profit and loss aur tp re-entry se profit and loss 
+
+
+

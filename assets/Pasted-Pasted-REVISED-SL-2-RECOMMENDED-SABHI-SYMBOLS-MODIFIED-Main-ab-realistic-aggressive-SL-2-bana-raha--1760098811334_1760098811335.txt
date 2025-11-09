@@ -1,0 +1,125 @@
+Pasted--REVISED-SL-2-RECOMMENDED-SABHI-SYMBOLS-MODIFIED-Main-ab-realistic-aggressive-SL-2-bana-raha-hu-1760084503901_1760084503902.txt
+🔄 REVISED SL-2 RECOMMENDED - SABHI SYMBOLS MODIFIED
+Main ab realistic aggressive SL-2 bana raha hu jisme SABHI 10 symbols me proper changes honge:
+
+🟩 SL-2 RECOMMENDED (Realistic Tighter SL - All Symbols)
+CONCEPT:
+SL-1: Wide/Conservative (original) - Zyada room, kam SL hit
+SL-2: Tight/Realistic (recommended) - Tight control, better RR
+1. EURUSD (LOW Volatility) - MODIFIED ⭐
+Pip Value = $10/lot | 1 pip = 0.0001
+
+Account	Lot	Risk %	Pip Value	Risk $	SL-2 (pips)	Max Loss
+$5,000	0.05	1.5%	$0.50	$75	100 ⬇️	$50
+$10,000	0.10	1.5%	$1.00	$150	100 ⬇️	$100
+$25,000	1.00	2%	$10.00	$500	35 ⬇️	$350
+$50,000	2.50	2%	$25.00	$1,000	30 ⬇️	$750
+$100,000	5.00	2%	$50.00	$2,000	30 ⬇️	$1,500
+Change: 150→100 pips ($10k), 40→30 pips (large accounts)
+
+2. GBPUSD (MEDIUM) - MODIFIED ⭐
+Pip Value = $10/lot | 1 pip = 0.0001
+
+Account	Lot	Risk %	Pip Value	Risk $	SL-2 (pips)	Max Loss
+$5,000	0.05	1.5%	$0.50	$75	120 ⬇️	$60
+$10,000	0.10	1.5%	$1.00	$150	120 ⬇️	$120
+$25,000	1.00	2%	$10.00	$500	40 ⬇️	$400
+$50,000	2.50	2%	$25.00	$1,000	35 ⬇️	$875
+$100,000	5.00	2.5%	$50.00	$2,500	40 ⬇️	$2,000
+Change: 150→120 pips ($10k), tighter large account SL
+
+3. AUDUSD (MEDIUM) - MODIFIED ⭐
+Pip Value = $10/lot | 1 pip = 0.0001
+
+Account	Lot	Risk %	Pip Value	Risk $	SL-2 (pips)	Max Loss
+$5,000	0.05	1.5%	$0.50	$75	120 ⬇️	$60
+$10,000	0.10	1.5%	$1.00	$150	120 ⬇️	$120
+$25,000	1.00	2%	$10.00	$500	40 ⬇️	$400
+$50,000	2.50	2%	$25.00	$1,000	35 ⬇️	$875
+$100,000	5.00	2.5%	$50.00	$2,500	40 ⬇️	$2,000
+4. USDCAD (MEDIUM) - MODIFIED ⭐
+Pip Value = $10/lot | 1 pip = 0.0001
+
+Account	Lot	Risk %	Pip Value	Risk $	SL-2 (pips)	Max Loss
+$5,000	0.05	1.5%	$0.50	$75	120 ⬇️	$60
+$10,000	0.10	1.5%	$1.00	$150	120 ⬇️	$120
+$25,000	1.00	2%	$10.00	$500	40 ⬇️	$400
+$50,000	2.50	2%	$25.00	$1,000	35 ⬇️	$875
+$100,000	5.00	2.5%	$50.00	$2,500	40 ⬇️	$2,000
+5. NZDUSD (MEDIUM) - MODIFIED ⭐
+Pip Value = $10/lot | 1 pip = 0.0001
+
+Account	Lot	Risk %	Pip Value	Risk $	SL-2 (pips)	Max Loss
+$5,000	0.05	1.5%	$0.50	$75	120 ⬇️	$60
+$10,000	0.10	1.5%	$1.00	$150	120 ⬇️	$120
+$25,000	1.00	2%	$10.00	$500	40 ⬇️	$400
+$50,000	2.50	2%	$25.00	$1,000	35 ⬇️	$875
+$100,000	5.00	2.5%	$50.00	$2,500	40 ⬇️	$2,000
+6. USDJPY (MEDIUM) - MODIFIED ⭐
+Pip Value = $9/lot | 1 pip = 0.01
+
+Account	Lot	Risk %	Pip Value	Risk $	SL-2 (pips)	Max Loss
+$5,000	0.05	1.5%	$0.45	$75	130 ⬇️	$58
+$10,000	0.10	1.5%	$0.90	$150	130 ⬇️	$117
+$25,000	1.00	2%	$9.00	$500	45 ⬇️	$405
+$50,000	2.50	2%	$22.50	$1,000	38 ⬇️	$855
+$100,000	5.00	2.5%	$45.00	$2,500	45 ⬇️	$2,025
+Change: 166→130 pips ($10k), proportional reduction
+
+7. EURJPY (HIGH) - MODIFIED ⭐
+Pip Value = $9.5/lot | 1 pip = 0.01
+
+Account	Lot	Risk %	Pip Value	Risk $	SL-2 (pips)	Max Loss
+$5,000	0.05	1%	$0.475	$50	80 ⬇️	$38
+$10,000	0.10	1%	$0.95	$100	80 ⬇️	$76
+$25,000	1.00	1.5%	$9.50	$375	30 ⬇️	$285
+$50,000	2.50	2%	$23.75	$1,000	35 ⬇️	$831
+$100,000	5.00	2%	$47.50	$2,000	35 ⬇️	$1,662
+Change: 111→80 pips ($10k), tighter HIGH volatility control
+
+8. GBPJPY (HIGH) - MODIFIED ⭐
+Pip Value = $9/lot | 1 pip = 0.01
+
+Account	Lot	Risk %	Pip Value	Risk $	SL-2 (pips)	Max Loss
+$5,000	0.05	1%	$0.45	$50	80 ⬇️	$36
+$10,000	0.10	1%	$0.90	$100	80 ⬇️	$72
+$25,000	1.00	1.5%	$9.00	$375	30 ⬇️	$270
+$50,000	2.50	2%	$22.50	$1,000	35 ⬇️	$788
+$100,000	5.00	2%	$45.00	$2,000	35 ⬇️	$1,575
+9. AUDJPY (HIGH) - MODIFIED ⭐
+Pip Value = $9.2/lot | 1 pip = 0.01
+
+Account	Lot	Risk %	Pip Value	Risk $	SL-2 (pips)	Max Loss
+$5,000	0.05	1%	$0.46	$50	80 ⬇️	$37
+$10,000	0.10	1%	$0.92	$100	80 ⬇️	$74
+$25,000	1.00	1.5%	$9.20	$375	30 ⬇️	$276
+$50,000	2.50	2%	$23.00	$1,000	35 ⬇️	$805
+$100,000	5.00	2%	$46.00	$2,000	35 ⬇️	$1,610
+10. XAUUSD - GOLD (HIGH) - MODIFIED ⭐
+Pip Value = $1/lot | 1 pip = 0.01
+
+Account	Lot	Risk %	Pip Value	Risk $	SL-2 (pips)	Max Loss
+$5,000	0.05	1%	$0.05	$50	500 ⬇️	$25
+$10,000	0.10	1.5%	$0.10	$150	800 ⬇️	$80
+$25,000	1.00	2%	$1.00	$500	300 ⬇️	$300
+$50,000	2.50	2.5%	$2.50	$1,250	300 ⬇️	$750
+$100,000	5.00	3%	$5.00	$3,000	200 ⬇️	$1,000
+📊 SL-1 vs SL-2 COMPARISON ($10k Account):
+Symbol	Volatility	SL-1 (Wide)	SL-2 (Tight)	Difference
+EURUSD	LOW	150 pips	100 pips	-33% ⬇️
+GBPUSD	MEDIUM	150 pips	120 pips	-20% ⬇️
+AUDUSD	MEDIUM	150 pips	120 pips	-20% ⬇️
+USDCAD	MEDIUM	150 pips	120 pips	-20% ⬇️
+NZDUSD	MEDIUM	150 pips	120 pips	-20% ⬇️
+USDJPY	MEDIUM	166 pips	130 pips	-22% ⬇️
+EURJPY	HIGH	111 pips	80 pips	-28% ⬇️
+GBPJPY	HIGH	111 pips	80 pips	-28% ⬇️
+AUDJPY	HIGH	111 pips	80 pips	-28% ⬇️
+XAUUSD	HIGH	1500 pips	800 pips	-47% ⬇️
+✅ AB YE DUAL SYSTEM KA MATLAB HAI:
+SL-1 (Conservative): Wide SL, kam SL hit, safe approach
+SL-2 (Aggressive): Tight SL, better RR, active management
+
+Testing ke liye perfect: Aap dono compare kar sakte ho ki kaun sa better perform karta hai!
+
+Kya ab ye sahi hai? 🎯

@@ -1,0 +1,159 @@
+Pasted--BILKUL-SAHI-COMPLETE-PLAN-BANA-RAHA-HU-Aap-sahi-keh-rahe-ho-SABHI-10-SYMBOLS-ke-liye-dono-sy-1760084558859_1760084558859.txt
+✅ BILKUL SAHI - COMPLETE PLAN BANA RAHA HU!
+Aap sahi keh rahe ho - SABHI 10 SYMBOLS ke liye dono systems implement honge aur SL hunting bhi fully compatible hoga. Main zero-error guarantee ke saath implement karunga.
+
+🎯 COMPLETE DUAL SL SYSTEM IMPLEMENTATION PLAN
+📊 SCOPE - ALL 10 SYMBOLS:
+1. EURUSD (LOW)
+2. GBPUSD (MEDIUM)
+3. AUDUSD (MEDIUM)
+4. USDCAD (MEDIUM)
+5. NZDUSD (MEDIUM)
+6. USDJPY (MEDIUM)
+7. EURJPY (HIGH)
+8. GBPJPY (HIGH)
+9. AUDJPY (HIGH)
+10. XAUUSD (HIGH - GOLD)
+📋 IMPLEMENTATION TASKS:
+PHASE 1: CONFIG SETUP (ALL SYMBOLS)
+Task 1.1: Add complete SL-1 ORIGINAL table to config
+
+✅ All 10 symbols × 5 account tiers = 50 configurations
+✅ Risk %, SL pips, Dollar caps defined
+Task 1.2: Add complete SL-2 RECOMMENDED table to config
+
+✅ All 10 symbols × 5 account tiers = 50 configurations
+✅ Modified realistic SL values
+Task 1.3: Add SL system control flags
+
+✅ active_sl_system: "sl-1" or "sl-2"
+✅ sl_system_enabled: true/false
+✅ symbol_sl_reductions: {} for % tracking
+PHASE 2: CORE BUG FIXES
+Task 2.1: Fix Gold pip calculation bug (pip_calculator.py line 66)
+
+❌ Current: point_value = lot_size * 100
+✅ Fix to: point_value = lot_size * 1
+Task 2.2: Rebuild SL calculation to use active system
+
+✅ Detect active_sl_system (sl-1 or sl-2)
+✅ Apply symbol_sl_reductions if any
+✅ Return accurate SL pips for ALL symbols
+Task 2.3: Add pre-trade validation
+
+✅ Verify expected loss matches risk cap
+✅ Block trade if mismatch detected
+PHASE 3: SL HUNTING INTEGRATION
+Task 3.1: Update price_monitor_service.py
+
+✅ Use active SL system for hunt detection
+✅ Apply reductions when checking distance
+✅ Re-entry calculations use correct SL
+Task 3.2: Update reentry_manager.py
+
+✅ Store which SL system was used in chain
+✅ Maintain consistency across re-entries
+✅ Work with reduced SL values
+Task 3.3: Test SL hunt with both systems
+
+✅ SL-1: Wide SL hunt scenario
+✅ SL-2: Tight SL hunt scenario
+✅ Reduced SL hunt scenario
+PHASE 4: TELEGRAM COMMANDS
+Task 4.1: Add new category "⚙️ SL SYSTEM CONTROL"
+
+/sl_status - Show active system & settings
+/sl_system_change [sl-1/sl-2] - Switch between systems
+/sl_system_on [sl-1/sl-2] - Enable specific system
+/complete_sl_system_off - Disable all SL
+Task 4.2: Update "💰 RISK & LOT MANAGEMENT"
+
+/view_sl_config - Show active SL (all 10 symbols)
+  → Display: Symbol | Volatility | Original SL | Reduced % | Current SL
+  
+/set_symbol_sl SYMBOL PERCENT - Reduce SL by 5-50%
+  → Example: /set_symbol_sl XAUUSD 20 (reduce Gold SL by 20%)
+  → Only affects specified symbol
+  
+/reset_symbol_sl SYMBOL - Reset one symbol to original
+/reset_all_sl - Reset all symbols to original
+Task 4.3: Remove deprecated command
+
+❌ Delete /update_volatility (no longer needed)
+PHASE 5: COMPREHENSIVE TESTING
+Task 5.1: Test SL-1 System (Original - Wide SL)
+
+✅ EURUSD: 150 pips @ $10k
+✅ XAUUSD: 1500 pips @ $10k
+✅ All 10 symbols verified
+Task 5.2: Test SL-2 System (Recommended - Realistic)
+
+✅ EURUSD: 150 pips @ $10k
+✅ XAUUSD: 800 pips @ $10k
+✅ All 10 symbols verified
+Task 5.3: Test SL Reduction
+
+✅ Reduce XAUUSD by 20% → Check new SL
+✅ Reduce EURUSD by 30% → Check new SL
+✅ Verify other symbols unchanged
+Task 5.4: Test System Switching
+
+✅ Switch sl-1 → sl-2 (check all symbols update)
+✅ Switch sl-2 → sl-1 (check all symbols update)
+✅ Verify reductions persist/reset correctly
+Task 5.5: Test SL Hunting Integration
+
+✅ SL hunt with SL-1 system
+✅ SL hunt with SL-2 system
+✅ SL hunt with 30% reduced SL
+✅ Re-entry uses correct SL
+Task 5.6: Test Edge Cases
+
+✅ Invalid symbol name
+✅ Invalid reduction % (<5% or >50%)
+✅ System disabled state
+✅ Multiple rapid switches
+PHASE 6: VALIDATION & ERROR CHECK
+Task 6.1: LSP Error Check
+
+✅ Fix all Python syntax errors
+✅ Fix all type errors
+✅ Zero LSP diagnostics
+Task 6.2: Runtime Error Check
+
+✅ Test all Telegram commands
+✅ Verify no crashes
+✅ Check error handling
+Task 6.3: Logic Verification
+
+✅ Pip calculations accurate (all symbols)
+✅ Risk caps enforced
+✅ SL hunting works correctly
+✅ Re-entry system functional
+Task 6.4: Final Integration Test
+
+✅ Place test trade with SL-1
+✅ Place test trade with SL-2
+✅ Place test trade with reduced SL
+✅ Trigger SL hunt and verify re-entry
+⚡ CRITICAL INTEGRATION POINTS:
+1. SL Hunting Compatibility:
+# price_monitor_service.py
+def _check_sl_hunt_reentries():
+    # Get active SL system
+    active_system = config['active_sl_system']  # sl-1 or sl-2
+    
+    # Apply any reductions
+    reduction = config['symbol_sl_reductions'].get(symbol, 0)
+    
+    # Calculate with correct system + reduction
+    sl_distance = get_sl_from_system(active_system, symbol, account)
+    sl_distance *= (1 - reduction/100)
+    
+    # Check hunt distance with CORRECT SL
+    if price_distance < (sl_distance * hunt_threshold):
+        # Re-entry with SAME system & reduction
+2. Re-entry Chain Tracking:
+# Store in chain metadata
+chain.metadata = {
+    'sl_system_used': 'sl-...
